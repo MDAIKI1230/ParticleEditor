@@ -1,6 +1,7 @@
 #pragma once
 
 #include "SceneConstants.h"
+#include "SystemBase.h"
 
 class SceneBase
 {
