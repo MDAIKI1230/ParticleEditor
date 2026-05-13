@@ -1,9 +1,11 @@
+#include "BaseConstants.h"
+
 #include "ApplicationManager.h"
 
 ApplicationManager::ApplicationManager()
 {
 	ChangeWindowMode(true);
-	SetGraphMode(990, 540, 32);
+	SetGraphMode(Config::WINDOW_SIZE_W, Config::WINDOW_SIZE_H, Config::COLOR_BIT);
 }
 
 int ApplicationManager::ApplicationMain()
