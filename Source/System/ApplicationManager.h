@@ -1,7 +1,10 @@
 #pragma once
 
+#include <DxLib.h>
 
 class ApplicationManager
 {
-	int main
+public:
+	ApplicationManager();
+	int ApplicationMain();
 };
