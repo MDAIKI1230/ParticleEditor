@@ -12,5 +12,5 @@ void SceneManager::Execute()
 
 void SceneManager::Draw()
 {
-	SceneManager::Draw();
+	currentScene->Draw();
 }

@@ -1,5 +1,7 @@
 #pragma once
 
+#include <vector>
+
 #include "SceneConstants.h"
 #include "SystemBase.h"
 
@@ -18,4 +20,5 @@ protected:
 	void Terminate();
 protected:
 	SceneState state{ SceneState::FADEIN };
+	std::vector<SystemBase*> systems;
 };
