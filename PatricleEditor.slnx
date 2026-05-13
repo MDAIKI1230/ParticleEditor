@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="PatricleEditor.vcxproj" />
+  <Project Path="PatricleEditor.vcxproj" Id="8149e0fa-741e-4749-a940-496e75935e06" />
 </Solution>
