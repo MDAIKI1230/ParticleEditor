@@ -2,5 +2,6 @@
 
 class ResourceManager
 {
+public:
 
 };

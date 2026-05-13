@@ -13,6 +13,7 @@ void SceneBase::Execute()
 		break;
 	case SceneState::FADEIN:
 		// ロード画面からシーンに移行。
+		FadeIn();
 		break;
 	case SceneState::UPDATE:
 		// 更新(物理更新も含む)
@@ -24,6 +25,7 @@ void SceneBase::Execute()
 		break;
 	case SceneState::FADEOUT:
 		// ロードシーンに移行
+		FadeOut();
 		break;
 	default:
 		break;
@@ -41,6 +43,16 @@ void SceneBase::FadeIn()
 }
 
 void SceneBase::FadeOut()
+{
+
+}
+
+void Update()
+{
+
+}
+
+void Terminate()
 {
 
 }
