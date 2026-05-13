@@ -25,6 +25,12 @@
     <Filter Include="ソース ファイル\System\Manager\Scenes">
       <UniqueIdentifier>{71ffc74c-3a48-405b-9449-cf3ac627fa04}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Common\Constants">
+      <UniqueIdentifier>{091ed783-43bc-4937-89cc-479d5142ff98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Common\BaseClass">
+      <UniqueIdentifier>{ec033f59-2101-4b07-8488-89b1efb7f199}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Main.cpp">
@@ -36,6 +42,18 @@
     <ClCompile Include="Source\System\Scenes\SceneBase.cpp">
       <Filter>ソース ファイル\System\Manager\Scenes</Filter>
     </ClCompile>
+    <ClCompile Include="Source\System\ObjectManager.cpp">
+      <Filter>ソース ファイル\System\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\TimeManager.cpp">
+      <Filter>ソース ファイル\System\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\ResourceManager.cpp">
+      <Filter>ソース ファイル\System\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\InputManager.cpp">
+      <Filter>ソース ファイル\System\Manager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\System\ApplicationManager.h">
@@ -44,8 +62,26 @@
     <ClInclude Include="Source\System\Scenes\SceneBase.h">
       <Filter>ソース ファイル\System\Manager\Scenes</Filter>
     </ClInclude>
+    <ClInclude Include="Source\System\ObjectManager.h">
+      <Filter>ソース ファイル\System\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\TimeManager.h">
+      <Filter>ソース ファイル\System\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\ResourceManager.h">
+      <Filter>ソース ファイル\System\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\InputManager.h">
+      <Filter>ソース ファイル\System\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\Constants\BaseConstants.h">
+      <Filter>ソース ファイル\Common\Constants</Filter>
+    </ClInclude>
     <ClInclude Include="Source\Common\Constants\SceneConstants.h">
-      <Filter>ソース ファイル\Common</Filter>
+      <Filter>ソース ファイル\Common\Constants</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\BaseClass\ObjectBase.h">
+      <Filter>ソース ファイル\Common\BaseClass</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
