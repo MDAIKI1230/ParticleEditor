@@ -16,8 +16,8 @@ protected:
 	void FadeIn();
 	void FadeOut();
 	virtual void Initialize() = 0;
-	void Update();
-	void Terminate();
+	virtual void Update();
+	virtual void Terminate();
 protected:
 	SceneState state{ SceneState::FADEIN };
 	std::vector<SystemBase*> systems;
