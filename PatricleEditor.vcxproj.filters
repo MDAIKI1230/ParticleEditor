@@ -31,6 +31,9 @@
     <Filter Include="ソース ファイル\Common\BaseClass">
       <UniqueIdentifier>{ec033f59-2101-4b07-8488-89b1efb7f199}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Common\ECS">
+      <UniqueIdentifier>{30ad95f8-c38a-46a4-8244-5989da6fb360}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Main.cpp">
@@ -56,6 +59,9 @@
     </ClCompile>
     <ClCompile Include="Source\System\SceneManager.cpp">
       <Filter>ソース ファイル\System\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\ECS\SparseSet.cpp">
+      <Filter>ソース ファイル\Common\ECS</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -91,6 +97,9 @@
     </ClInclude>
     <ClInclude Include="Source\Common\BaseClass\SystemBase.h">
       <Filter>ソース ファイル\Common\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\ECS\SparseSet.h">
+      <Filter>ソース ファイル\Common\ECS</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

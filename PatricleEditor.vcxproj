@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Common\ECS\SparseSet.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\System\ApplicationManager.cpp" />
     <ClCompile Include="Source\System\InputManager.cpp" />
@@ -153,6 +154,7 @@
     <ClInclude Include="Source\Common\BaseClass\SystemBase.h" />
     <ClInclude Include="Source\Common\Constants\BaseConstants.h" />
     <ClInclude Include="Source\Common\Constants\SceneConstants.h" />
+    <ClInclude Include="Source\Common\ECS\SparseSet.h" />
     <ClInclude Include="Source\System\ApplicationManager.h" />
     <ClInclude Include="Source\System\InputManager.h" />
     <ClInclude Include="Source\System\ObjectManager.h" />

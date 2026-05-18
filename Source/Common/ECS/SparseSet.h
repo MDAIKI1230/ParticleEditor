@@ -1,7 +1,6 @@
 #pragma once
 
 #include <vector>
-#include <memory>
 #include <unordered_map>
 
 template<typename T>
@@ -10,18 +9,25 @@ class SparseSet
 public:
 	SparseSet() = default;
 
-	// 追加
-	T* Add();
 	/// <summary>
 	/// 取得
 	/// </summary>
 	/// <param name="entity">エンティティID</param>
 	/// <returns></returns>
 	T* Get(int entity);
-	// 除外
-	void Remove();
+	/// <summary>
+	/// 追加
+	/// </summary>
+	/// <param name="entity">エンティティID</param>
+	/// <param name="component">追加コンポーネント</param>
+	void Add(int entity, T* component);
+	/// <summary>
+	/// 除外
+	/// </summary>
+	/// <param name="entity">エンティティID</param>
+	void Remove(int entity);
 	// サイズ生成
-	void Reserve();
+	void Reserve(size_t size);
 	// 全削除
 	void Clear();
 	/// <summary>
@@ -29,19 +35,19 @@ public:
 	/// </summary>
 	/// <param name="output">取得したコンポーネント</param>
 	/// <returns>取得できたか</returns>
-	bool TryGet(T* output);
+	bool TryGet(int entity, T* output);
 	/// <summary>
 	/// 持っているか
 	/// </summary>
 	/// <param name="target">対象</param>
 	/// <returns>持っているか</returns>
-	bool Has(const T* target);
+	bool Has(int entity);
 	// サイズ
 	size_t GetSize();
 	// 実データコンテナ取得
-	std::vector* GetDense();
+	std::vector<T>* GetDense();
 	// エンティティコンテナ取得
-	std::vector* GetEntities();
+	std::vector<int>* GetEntities();
 
 	~SparseSet();
 public:
@@ -50,5 +56,5 @@ public:
 	// エンティティ
 	std::vector<int> entities;
 	// 対応マップ
-	std::unordered_map<int,T> sparse;
+	std::unordered_map<int,int> sparse;
 };
