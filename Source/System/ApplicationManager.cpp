@@ -25,4 +25,6 @@ int ApplicationManager::ApplicationMain()
 	}
 
 	DxLib_End();				// ＤＸライブラリ使用の終了処理
+
+	return 0;
 }

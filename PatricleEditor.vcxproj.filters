@@ -101,5 +101,11 @@
     <ClInclude Include="Source\Common\ECS\SparseSet.h">
       <Filter>ソース ファイル\Common\ECS</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Common\BaseClass\StorageBase.h">
+      <Filter>ソース ファイル\Common\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\BaseClass\ComponentBase.h">
+      <Filter>ソース ファイル\Common\BaseClass</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

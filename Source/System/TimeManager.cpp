@@ -43,12 +43,12 @@ void TimeManager::WaitNextFrame()
 
 float TimeManager::GetDeltaTime()
 {
-	return deltaTime;
+	return static_cast<float>(deltaTime);
 }
 
 float TimeManager::GetFixedDeltaTime()
 {
-	return FIXED_TIME;
+	return static_cast<float>(FIXED_TIME);
 }
 
 bool TimeManager::IsFixedUpdateTime()
