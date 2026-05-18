@@ -32,11 +32,6 @@ void SceneBase::Execute()
 	}
 }
 
-void SceneBase::Draw()
-{
-
-}
-
 void SceneBase::FadeIn()
 {
 
@@ -48,11 +43,6 @@ void SceneBase::FadeOut()
 }
 
 void Update()
-{
-
-}
-
-void Terminate()
 {
 
 }
