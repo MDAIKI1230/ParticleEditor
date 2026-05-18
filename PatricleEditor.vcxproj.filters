@@ -54,6 +54,9 @@
     <ClCompile Include="Source\System\InputManager.cpp">
       <Filter>ソース ファイル\System\Manager</Filter>
     </ClCompile>
+    <ClCompile Include="Source\System\SceneManager.cpp">
+      <Filter>ソース ファイル\System\Manager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\System\ApplicationManager.h">
@@ -81,6 +84,12 @@
       <Filter>ソース ファイル\Common\Constants</Filter>
     </ClInclude>
     <ClInclude Include="Source\Common\BaseClass\ObjectBase.h">
+      <Filter>ソース ファイル\Common\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\SceneManager.h">
+      <Filter>ソース ファイル\System\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\BaseClass\SystemBase.h">
       <Filter>ソース ファイル\Common\BaseClass</Filter>
     </ClInclude>
   </ItemGroup>
