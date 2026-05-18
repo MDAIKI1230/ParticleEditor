@@ -32,6 +32,18 @@ void SceneBase::Execute()
 	}
 }
 
+void SceneBase::AddSystem(std::unique_ptr<SystemBase> system)
+{
+	systems.push_back(std::move(system));
+	
+
+}
+
+void SceneBase::AddStorage(std::unique_ptr<StorageBase> storage)
+{
+
+}
+
 void SceneBase::FadeIn()
 {
 

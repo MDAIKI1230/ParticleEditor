@@ -9,8 +9,3 @@ void SceneManager::Execute()
 {
 	currentScene->Execute();
 }
-
-void SceneManager::Draw()
-{
-	currentScene->Draw();
-}

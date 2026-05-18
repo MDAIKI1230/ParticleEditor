@@ -9,7 +9,6 @@ class SceneManager
 public:
 	SceneManager();
 	void Execute();
-	void Draw();
 private:
 	std::unique_ptr<SceneBase> currentScene;
 	std::unique_ptr<SceneBase> nextScene;
