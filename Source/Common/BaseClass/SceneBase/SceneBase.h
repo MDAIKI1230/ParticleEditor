@@ -1,15 +1,14 @@
 #pragma once
 
-#include <vector>
-#include <unordered_map>
-#include <typeindex>
 #include <memory>
+
+#include "IWorld.h"
 
 #include "SceneConstants.h"
 #include "SystemBase.h"
 #include "StorageBase.h"
 
-class SceneBase
+class SceneBase:public IWorld
 {
 public:
 	SceneBase() = default;
@@ -26,10 +25,4 @@ protected:
 protected:
 	// シーンの状態
 	SceneState state{ SceneState::FADEIN };
-	// システム
-	std::vector<std::unique_ptr<SystemBase>> systems;
-	// ストレージ
-	std::vector < std::unique_ptr<StorageBase>> storages;
-	// ストレージと型の対応マップ
-	std::unordered_map<std::type_index, size_t> storageMap;
 };

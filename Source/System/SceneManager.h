@@ -2,7 +2,7 @@
 
 #include <memory>
 
-#include "Scenes/SceneBase.h"
+#include "SceneBase.h"
 
 class SceneManager
 {

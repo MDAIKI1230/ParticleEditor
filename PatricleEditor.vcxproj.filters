@@ -34,6 +34,12 @@
     <Filter Include="ソース ファイル\Common\ECS">
       <UniqueIdentifier>{30ad95f8-c38a-46a4-8244-5989da6fb360}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Common\Interface">
+      <UniqueIdentifier>{f5e4ae4d-09cf-48be-b759-b945377bb10e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Common\BaseClass\SceneBase">
+      <UniqueIdentifier>{0d481948-8e47-4001-a6f5-564ba58f5bbe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Main.cpp">
@@ -41,9 +47,6 @@
     </ClCompile>
     <ClCompile Include="Source\System\ApplicationManager.cpp">
       <Filter>ソース ファイル\System\Manager</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\System\Scenes\SceneBase.cpp">
-      <Filter>ソース ファイル\System\Manager\Scenes</Filter>
     </ClCompile>
     <ClCompile Include="Source\System\ObjectManager.cpp">
       <Filter>ソース ファイル\System\Manager</Filter>
@@ -63,13 +66,16 @@
     <ClCompile Include="Source\Common\ECS\SparseSet.cpp">
       <Filter>ソース ファイル\Common\ECS</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Common\BaseClass\SceneBase\SceneBase.cpp">
+      <Filter>ソース ファイル\Common\BaseClass\SceneBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Interface\IWorld.cpp">
+      <Filter>ソース ファイル\Common\Interface</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\System\ApplicationManager.h">
       <Filter>ソース ファイル\System\Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\System\Scenes\SceneBase.h">
-      <Filter>ソース ファイル\System\Manager\Scenes</Filter>
     </ClInclude>
     <ClInclude Include="Source\System\ObjectManager.h">
       <Filter>ソース ファイル\System\Manager</Filter>
@@ -106,6 +112,15 @@
     </ClInclude>
     <ClInclude Include="Source\Common\BaseClass\ComponentBase.h">
       <Filter>ソース ファイル\Common\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\Interface\IWorld.h">
+      <Filter>ソース ファイル\Common\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\ECS\ComponentStorage.h">
+      <Filter>ソース ファイル\Common\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\BaseClass\SceneBase\SceneBase.h">
+      <Filter>ソース ファイル\Common\BaseClass\SceneBase</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
