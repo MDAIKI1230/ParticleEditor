@@ -40,8 +40,4 @@ protected:
 	SceneState state{ SceneState::FADEIN };
 	// システム
 	std::vector<std::unique_ptr<SystemBase>> systems;
-	// ストレージ
-	std::vector < std::unique_ptr<StorageBase>> storages;
-	// ストレージと型の対応マップ
-	std::unordered_map<std::type_index, size_t> storageMap;
 };
