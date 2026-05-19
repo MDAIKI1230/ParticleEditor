@@ -25,11 +25,6 @@ protected:
 	/// </summary>
 	/// <param name="system">入れたいシステム</param>
 	void AddSystem(std::unique_ptr<SystemBase> system);
-	/// <summary>
-	/// ストレージの追加(moveされる)
-	/// </summary>
-	/// <param name="storage">入れたいストレージ</param>
-	void AddStorage(std::unique_ptr<StorageBase> storage);
 	void FadeIn();
 	void FadeOut();
 	virtual void Initialize() = 0;

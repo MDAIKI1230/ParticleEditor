@@ -21,6 +21,17 @@ protected:
 	{
 		return &storages;
 	}
+
+	/// <summary>
+	/// ストレージの追加(moveされる)
+	// </summary>
+	/// <param name="storage">入れたいストレージ</param>
+	void AddStorage(std::unique_ptr<StorageBase> storage)
+	{
+		// コンテナに追加
+		storages.push_back(std::move(storage));
+	}
+
 private:
 	// ストレージ
 	std::vector < std::unique_ptr<StorageBase>> storages;
