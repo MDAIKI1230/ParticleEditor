@@ -4,11 +4,11 @@
 #include "SparseSet.h"
 
 template<typename T>
-class ComponentStorage :public StorageBase
+class ComponentStorageBase :public StorageBase
 {
 public:
 	// 仮想デストラクタ
-	virtual ~ComponentStorage();
+	virtual ~ComponentStorageBase();
 protected:
 	SparseSet<T> sparseSet;
 };
