@@ -1,3 +1,5 @@
+#include <algorithm>
+
 #include "SceneBase.h"
 
 void SceneBase::Execute()
@@ -38,8 +40,18 @@ void SceneBase::Execute()
 /// <param name="system">入れたいシステム</param>
 void SceneBase::AddSystem(std::unique_ptr<SystemBase> system)
 {
-	// コンテナに追加
-	systems.push_back(std::move(system));
+	// 入れる位置を探す
+	auto it = std::lower_bound(
+		systems.begin(),
+		systems.end(),
+		system,
+		[](const std::unique_ptr<SystemBase>& a, const std::unique_ptr<SystemBase>& b)
+		{
+			return a->GetPriority() > b->GetPriority();
+		});
+
+	// その位置に挿入
+	systems.insert(it, std::move(system));
 }
 
 /// <summary>
