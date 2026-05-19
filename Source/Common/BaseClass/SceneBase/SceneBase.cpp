@@ -44,8 +44,12 @@ void SceneBase::FadeOut()
 
 void SceneBase::Update()
 {
-	for (int i{ 0 }; i < systems.size(); i++)
+	// システムコンテナ
+	const std::vector<std::unique_ptr<SystemBase>>* systems{ GetSystems() };
+
+	// 更新
+	for (int i{ 0 }; i < systems->size(); i++)
 	{
-		systems[i]->Update();
+		systems->at(i)->Update();
 	}
 }

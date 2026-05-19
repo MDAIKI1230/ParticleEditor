@@ -33,3 +33,9 @@ void IWorld::AddStorage(std::unique_ptr<StorageBase> storage)
 	// ストレージを追加
 	storages.push_back(std::move(storage));
 }
+
+// システムのコンテナ取得
+const std::vector<std::unique_ptr<SystemBase>>* IWorld::GetSystems()
+{
+	return &systems;
+}

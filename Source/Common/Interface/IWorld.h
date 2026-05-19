@@ -30,6 +30,8 @@ protected:
 	/// </summary>
 	/// <param name="storage">入れたいストレージ</param>
 	void AddStorage(std::unique_ptr<StorageBase> storage);
+	// システムのコンテナ取得
+	const std::vector<std::unique_ptr<SystemBase>>* GetSystems();
 private:
 	// システム
 	std::vector<std::unique_ptr<SystemBase>> systems;
