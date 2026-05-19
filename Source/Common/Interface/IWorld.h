@@ -19,6 +19,7 @@ public:
 	/// <returns></returns>
 	template<typename T>
 	const ComponentStorage<T>* GetStorage();
+protected:
 	/// <summary>
 	/// システムの追加(moveされる)
 	/// </summary>
@@ -29,7 +30,7 @@ public:
 	/// </summary>
 	/// <param name="storage">入れたいストレージ</param>
 	void AddStorage(std::unique_ptr<StorageBase> storage);
-protected:
+private:
 	// システム
 	std::vector<std::unique_ptr<SystemBase>> systems;
 	// ストレージ
