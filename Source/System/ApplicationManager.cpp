@@ -1,5 +1,8 @@
 #include <DxLib.h>
+
 #include "BaseConstants.h"
+
+#include "ServiceLocator.h"
 
 #include "ApplicationManager.h"
 
@@ -12,6 +15,10 @@ ApplicationManager::ApplicationManager()
 	inputManager = std::make_unique<InputManager>();
 	sceneManager = std::make_unique<SceneManager>();
 	timeManager = std::make_unique<TimeManager>();
+
+	// サービスロケータに登録
+	ServiceLocator::SetInputManager(inputManager.get());
+	ServiceLocator::SetTimeManager(timeManager.get());
 }
 
 int ApplicationManager::ApplicationMain()
