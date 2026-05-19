@@ -2,8 +2,6 @@
 
 
 #include <vector>
-#include <unordered_map>
-#include <typeindex>
 #include <memory>
 
 #include "SceneConstants.h"
@@ -18,6 +16,7 @@ class SceneBase:public IWorld
 public:
 	SceneBase() = default;
 	void Execute();
+	// 仮想デストラクタ
 	virtual ~SceneBase();
 protected:
 	/// <summary>

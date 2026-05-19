@@ -8,6 +8,8 @@ public:
 	virtual void Update(const IWorld* world) = 0;
 	// 優先度取得
 	int GetPriority() { return priority; }
+	// 仮想デストラクタ
+	virtual ~SystemBase();
 protected:
 	// 優先度
 	int priority{ 0 };

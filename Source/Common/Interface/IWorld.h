@@ -1,5 +1,7 @@
 #pragma once
 
+#include <typeindex>
+
 #include "ComponentStorage.h"
 
 class IWorld
@@ -15,6 +17,9 @@ public:
 	{
 		return static_cast<ComponentStorage<T>>(storageMap.at(typeid(T)));
 	}
+
+	// 仮想デストラクタ
+	virtual ~IWorld();
 protected:
 	// ストレージ
 	std::vector < std::unique_ptr<StorageBase>> storages;
