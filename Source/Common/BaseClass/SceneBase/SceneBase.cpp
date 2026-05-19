@@ -32,6 +32,26 @@ void SceneBase::Execute()
 	}
 }
 
+/// <summary>
+/// システムの追加(moveされる)
+/// </summary>
+/// <param name="system">入れたいシステム</param>
+void SceneBase::AddSystem(std::unique_ptr<SystemBase> system)
+{
+	// コンテナに追加
+	systems.push_back(std::move(system));
+}
+
+/// <summary>
+/// ストレージの追加(moveされる)
+/// </summary>
+/// <param name="storage">入れたいストレージ</param>
+void SceneBase::AddStorage(std::unique_ptr<StorageBase> storage)
+{
+	// コンテナに追加
+	storages.push_back(std::move(storage));
+}
+
 void SceneBase::FadeIn()
 {
 
@@ -44,12 +64,9 @@ void SceneBase::FadeOut()
 
 void SceneBase::Update()
 {
-	// システムコンテナ
-	const std::vector<std::unique_ptr<SystemBase>>* systems{ GetSystems() };
-
 	// 更新
-	for (int i{ 0 }; i < systems->size(); i++)
+	for (int i{ 0 }; i < systems.size(); i++)
 	{
-		systems->at(i)->Update();
+		systems[i]->Update(this);
 	}
 }

@@ -69,9 +69,6 @@
     <ClCompile Include="Source\Common\BaseClass\SceneBase\SceneBase.cpp">
       <Filter>ソース ファイル\Common\BaseClass\SceneBase</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Common\Interface\IWorld.cpp">
-      <Filter>ソース ファイル\Common\Interface</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\System\ApplicationManager.h">

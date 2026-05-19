@@ -1,12 +1,5 @@
 #pragma once
 
-#include <vector>
-#include <unordered_map>
-#include <typeindex>
-#include <memory>
-
-#include "SystemBase.h"
-#include "StorageBase.h"
 #include "ComponentStorage.h"
 
 class IWorld
@@ -19,24 +12,4 @@ public:
 	/// <returns></returns>
 	template<typename T>
 	const ComponentStorage<T>* GetStorage();
-protected:
-	/// <summary>
-	/// システムの追加(moveされる)
-	/// </summary>
-	/// <param name="system">入れたいシステム</param>
-	void AddSystem(std::unique_ptr<SystemBase> system);
-	/// <summary>
-	/// ストレージの追加(moveされる)
-	/// </summary>
-	/// <param name="storage">入れたいストレージ</param>
-	void AddStorage(std::unique_ptr<StorageBase> storage);
-	// システムのコンテナ取得
-	const std::vector<std::unique_ptr<SystemBase>>* GetSystems();
-private:
-	// システム
-	std::vector<std::unique_ptr<SystemBase>> systems;
-	// ストレージ
-	std::vector < std::unique_ptr<StorageBase>> storages;
-	// ストレージと型の対応マップ
-	std::unordered_map<std::type_index, size_t> storageMap;
 };

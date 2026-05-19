@@ -141,7 +141,6 @@
   <ItemGroup>
     <ClCompile Include="Source\Common\BaseClass\SceneBase\SceneBase.cpp" />
     <ClCompile Include="Source\Common\ECS\SparseSet.cpp" />
-    <ClCompile Include="Source\Common\Interface\IWorld.cpp" />
     <ClCompile Include="Source\Main.cpp" />
     <ClCompile Include="Source\System\ApplicationManager.cpp" />
     <ClCompile Include="Source\System\InputManager.cpp" />
