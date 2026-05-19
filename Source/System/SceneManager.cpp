@@ -5,7 +5,7 @@ SceneManager::SceneManager()
 
 }
 
-void SceneManager::Execute()
+void SceneManager::Update()
 {
 	currentScene->Execute();
 }

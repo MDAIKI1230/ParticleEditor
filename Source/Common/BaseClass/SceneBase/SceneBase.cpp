@@ -66,7 +66,7 @@ void SceneBase::AddStorage(std::unique_ptr<StorageBase> storage)
 
 void SceneBase::FadeIn()
 {
-
+	
 }
 
 void SceneBase::FadeOut()
