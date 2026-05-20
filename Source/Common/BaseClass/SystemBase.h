@@ -5,7 +5,7 @@
 class SystemBase
 {
 public:
-	virtual void Update(const IWorld* world) = 0;
+	virtual void Update(IWorld* world) = 0;
 	// 優先度取得
 	int GetPriority() const { return priority; }
 	// 仮想デストラクタ

@@ -23,7 +23,7 @@ public:
 			return nullptr;
 		}
 
-		return static_cast<ComponentStorageBase<T>*>(storageMap[it->second()].get());
+		return static_cast<ComponentStorageBase<T>*>(storages[it->second].get());
 	}
 
 	// 仮想デストラクタ

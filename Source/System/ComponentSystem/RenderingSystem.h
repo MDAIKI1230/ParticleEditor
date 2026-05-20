@@ -5,5 +5,5 @@
 class RenderingSystem:public SystemBase
 {
 public:
-	void Update(const IWorld* world) override;
+	void Update(IWorld* world) override;
 };
