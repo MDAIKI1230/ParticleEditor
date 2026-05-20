@@ -14,10 +14,10 @@
 class SceneBase:public IWorld
 {
 public:
-	SceneBase() = default;
+	SceneBase();
 	void Execute();
 	// 仮想デストラクタ
-	virtual ~SceneBase();
+	virtual ~SceneBase() = default;
 protected:
 	/// <summary>
 	/// システムの追加(moveされる)

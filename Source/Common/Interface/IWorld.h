@@ -27,7 +27,7 @@ public:
 	}
 
 	// 仮想デストラクタ
-	virtual ~IWorld();
+	virtual ~IWorld() = default;
 protected:
 	// ストレージ
 	std::vector<std::unique_ptr<StorageBase>> storages;

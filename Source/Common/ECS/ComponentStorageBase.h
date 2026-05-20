@@ -48,7 +48,7 @@ public:
 	std::vector<int>* GetEntities() { return sparseSet.GetEntities(); }
 
 	// 仮想デストラクタ
-	virtual ~ComponentStorageBase();
+	virtual ~ComponentStorageBase() = default;
 protected:
 	SparseSet<T> sparseSet;
 };

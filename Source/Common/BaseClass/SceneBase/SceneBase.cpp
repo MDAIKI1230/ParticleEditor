@@ -2,6 +2,13 @@
 
 #include "SceneBase.h"
 
+#include "RenderingSystem.h"
+
+SceneBase::SceneBase()
+{
+	AddSystem(std::make_unique<RenderingSystem>());
+}
+
 void SceneBase::Execute()
 {
 	switch (state)
