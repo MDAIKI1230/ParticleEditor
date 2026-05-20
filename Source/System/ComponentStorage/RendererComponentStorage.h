@@ -4,7 +4,7 @@
 
 #include "RendererComponent.h"
 
-class RendererComponent:public ComponentStorageBase<RendererComponent>
+class RendererComponentStorage:public ComponentStorageBase<RendererComponent>
 {
 
 };

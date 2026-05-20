@@ -4,5 +4,5 @@ class StorageBase
 {
 public:
 	StorageBase() = default;
-	virtual ~StorageBase();
+	virtual ~StorageBase() = default;
 };

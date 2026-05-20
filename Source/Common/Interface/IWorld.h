@@ -16,18 +16,18 @@ public:
 	template<typename T>
 	ComponentStorageBase<T>* GetStorage()
 	{
-		auto it{ storageMap.find(typeid(T)) };
+		auto it{ storageMap.find(std::type_index(typeid(T))) };
 
 		if (it == storageMap.end())
 		{
 			return nullptr;
 		}
 
-		return static_cast<ComponentStorageBase<T>*>(storageMap[it->second()].get());
+		return static_cast<ComponentStorageBase<T>*>(storages[it->second].get());
 	}
 
 	// 仮想デストラクタ
-	virtual ~IWorld();
+	virtual ~IWorld() = default;
 protected:
 	// ストレージ
 	std::vector<std::unique_ptr<StorageBase>> storages;
