@@ -64,6 +64,15 @@
     <Filter Include="ソース ファイル\Common\Math\Transform">
       <UniqueIdentifier>{09773b37-87f6-417f-b130-83aebe516ee0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\System\ComponentSystem">
+      <UniqueIdentifier>{73298b36-b8f0-446a-9ba7-8e290e4b06de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\System\ComponentStorage">
+      <UniqueIdentifier>{ff6994a5-0d9b-43c9-9a08-aa8f7a25b05d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\System\Components">
+      <UniqueIdentifier>{54506658-5fe2-4830-ac9b-c29613297c3c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Main.cpp">
@@ -122,6 +131,9 @@
     </ClCompile>
     <ClCompile Include="Source\Common\Math\Transform\Transform.cpp">
       <Filter>ソース ファイル\Common\Math\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\ComponentSystem\RenderringSystem.cpp">
+      <Filter>ソース ファイル\System\ComponentSystem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -208,6 +220,21 @@
     </ClInclude>
     <ClInclude Include="Source\Common\Math\Transform\Transform.h">
       <Filter>ソース ファイル\Common\Math\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\ComponentSystem\RenderingSystem.h">
+      <Filter>ソース ファイル\System\ComponentSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\ComponentStorage\RendererComponentStorage.h">
+      <Filter>ソース ファイル\System\ComponentStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Components\RendererComponent.h">
+      <Filter>ソース ファイル\System\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Components\TransformComponent.h">
+      <Filter>ソース ファイル\System\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\ComponentStorage\TransformComponentStorage.h">
+      <Filter>ソース ファイル\System\ComponentStorage</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

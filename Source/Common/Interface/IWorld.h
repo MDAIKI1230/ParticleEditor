@@ -1,8 +1,9 @@
 #pragma once
 
 #include <typeindex>
+#include <memory>
 
-#include "ComponentStorage.h"
+#include "ComponentStorageBase.h"
 
 class IWorld
 {
@@ -13,16 +14,23 @@ public:
 	/// <typeparam name="T">取得したいストレージ</typeparam>
 	/// <returns></returns>
 	template<typename T>
-	const ComponentStorage<T>* GetStorage()
+	ComponentStorageBase<T>* GetStorage()
 	{
-		return static_cast<ComponentStorage<T>>(storageMap.at(typeid(T)));
+		auto it{ storageMap.find(typeid(T)) };
+
+		if (it == storageMap.end())
+		{
+			return nullptr;
+		}
+
+		return static_cast<ComponentStorageBase<T>*>(storageMap[it->second()].get());
 	}
 
 	// 仮想デストラクタ
 	virtual ~IWorld();
 protected:
 	// ストレージ
-	std::vector < std::unique_ptr<StorageBase>> storages;
+	std::vector<std::unique_ptr<StorageBase>> storages;
 	// ストレージと型の対応マップ
 	std::unordered_map<std::type_index, size_t> storageMap;
 };

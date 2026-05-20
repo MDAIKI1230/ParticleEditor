@@ -4,6 +4,8 @@
 
 class TransformComponent
 {
+// ラッパー関数のためヘッダに直書きしてる
+// のちにECS化する際に使うためComponentに入れてる
 public:
 	TransformComponent() = default;
 	
