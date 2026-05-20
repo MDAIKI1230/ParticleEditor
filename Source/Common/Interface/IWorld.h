@@ -16,7 +16,7 @@ public:
 	template<typename T>
 	ComponentStorageBase<T>* GetStorage()
 	{
-		auto it{ storageMap.find(typeid(T)) };
+		auto it{ storageMap.find(std::type_index(typeid(T))) };
 
 		if (it == storageMap.end())
 		{

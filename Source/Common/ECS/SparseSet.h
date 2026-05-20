@@ -24,7 +24,7 @@ public:
 	/// </summary>
 	/// <param name="entity">エンティティID</param>
 	/// <param name="component">追加コンポーネント</param>
-	void Add(int entity, T* component)
+	void Add(int entity, const T& component)
 	{
 		// コンポーネント追加
 		dense.push_back(component);
@@ -70,7 +70,7 @@ public:
 	/// </summary>
 	/// <param name="output">取得したコンポーネント</param>
 	/// <returns>取得できたか</returns>
-	bool TryGet(int entity, T* output)
+	bool TryGet(int entity, T& output)
 	{
 		// 空チェック
 		if (sparse.empty())
@@ -129,12 +129,12 @@ public:
 		return &entities;
 	}
 
-	~SparseSet();
+	~SparseSet() = default;
 private:
 	// 実データ
-	std::vector<T> dense;
+	std::vector<T> dense{};
 	// エンティティ
-	std::vector<int> entities;
+	std::vector<int> entities{};
 	// 対応マップ
-	std::unordered_map<int,int> sparse;
+	std::unordered_map<int, int> sparse{};
 };

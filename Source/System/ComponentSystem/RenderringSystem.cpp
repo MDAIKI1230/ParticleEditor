@@ -13,15 +13,21 @@ void RenderingSystem::Update(IWorld* world)
 	ComponentStorageBase<TransformComponent>* transformStorage{ world->GetStorage<TransformComponent>() };
 	// エンティティ
 	std::vector<int>* entities{ rendererStorage->GetEntities() };
+	// トランスフォーム
+	TransformComponent trans{};
 	// 全コンポーネントを描画
 	for (auto id : *entities)
 	{
-		// トランスフォーム
-		TransformComponent* trans{ transformStorage->Get(id) };
+		// 取得&チェック
+		if (!transformStorage->TryGet(id, trans))
+		{
+			continue;
+		}
+
 		// レンダー
 		RendererComponent* renderer{ rendererStorage->Get(id) };
 		// 行列をセット
-		MV1SetMatrix(renderer->GetHandle(), trans->GetWorldMatrix());
+		MV1SetMatrix(renderer->GetHandle(), trans.GetWorldMatrix());
 		// 描画
 		MV1DrawModel(renderer->GetHandle());
 	}

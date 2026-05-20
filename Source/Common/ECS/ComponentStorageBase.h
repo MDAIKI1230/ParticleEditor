@@ -18,7 +18,7 @@ public:
 	/// </summary>
 	/// <param name="entity">エンティティID</param>
 	/// <param name="component">追加コンポーネント</param>
-	void Add(int entity, T* component) { sparseSet.Add(entity, component); }
+	void Add(int entity, const T& component) { sparseSet.Add(entity, component); }
 	/// <summary>
 	/// 除外
 	/// </summary>
@@ -33,7 +33,7 @@ public:
 	/// </summary>
 	/// <param name="output">取得したコンポーネント</param>
 	/// <returns>取得できたか</returns>
-	bool TryGet(int entity, T* output) { return sparseSet.TryGet(entity, output); }
+	bool TryGet(int entity, T& output) { return sparseSet.TryGet(entity, output); }
 	/// <summary>
 	/// 持っているか
 	/// </summary>
@@ -50,5 +50,5 @@ public:
 	// 仮想デストラクタ
 	virtual ~ComponentStorageBase() = default;
 protected:
-	SparseSet<T> sparseSet;
+	SparseSet<T> sparseSet{};
 };

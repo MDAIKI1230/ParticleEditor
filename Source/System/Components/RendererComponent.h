@@ -3,7 +3,14 @@
 class RendererComponent
 {
 public:
+	RendererComponent() = default;
+
+	RendererComponent(int _handle) :
+		handle(_handle)
+	{
+	}
+
 	int GetHandle() { return handle; }
 private:
-	int handle;
+	int handle{ -1 };
 };
