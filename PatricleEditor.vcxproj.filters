@@ -73,6 +73,9 @@
     <Filter Include="ソース ファイル\System\Components">
       <UniqueIdentifier>{54506658-5fe2-4830-ac9b-c29613297c3c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\System\Factory">
+      <UniqueIdentifier>{aa807ac1-0226-48c6-b3fc-fd2cd373f4cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Main.cpp">
@@ -238,6 +241,9 @@
     </ClInclude>
     <ClInclude Include="Source\System\Scenes\DebugScene.h">
       <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Factory\TransformComponentFactory.h">
+      <Filter>ソース ファイル\System\Factory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

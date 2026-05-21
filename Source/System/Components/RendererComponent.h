@@ -1,6 +1,6 @@
 #pragma once
 
-class RendererComponent
+struct RendererComponent
 {
 public:
 	RendererComponent() = default;

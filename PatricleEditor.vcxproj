@@ -188,6 +188,8 @@
     <ClInclude Include="Source\System\ComponentSystem\RenderingSystem.h" />
     <ClInclude Include="Source\System\Components\RendererComponent.h" />
     <ClInclude Include="Source\System\Components\TransformComponent.h" />
+    <ClInclude Include="Source\System\Components\VFXComponent.h" />
+    <ClInclude Include="Source\System\Factory\TransformComponentFactory.h" />
     <ClInclude Include="Source\System\InputManager.h" />
     <ClInclude Include="Source\System\ObjectManager.h" />
     <ClInclude Include="Source\System\ResourceManager.h" />
