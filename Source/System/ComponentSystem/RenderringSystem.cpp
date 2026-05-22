@@ -8,9 +8,9 @@
 void RenderingSystem::Update(IWorld* world)
 {
 	// レンダラーコンポーネントストレージ
-	ComponentStorageBase<RendererComponent>* rendererStorage{ world->GetStorage<RendererComponent>() };
+	SparseSetStorageBase<RendererComponent>* rendererStorage{ world->GetStorage<RendererComponent>() };
 	// Transformストレージ
-	ComponentStorageBase<TransformComponent>* transformStorage{ world->GetStorage<TransformComponent>() };
+	SparseSetStorageBase<TransformComponent>* transformStorage{ world->GetStorage<TransformComponent>() };
 	// エンティティ
 	std::vector<int>* entities{ rendererStorage->GetEntities() };
 	// トランスフォーム

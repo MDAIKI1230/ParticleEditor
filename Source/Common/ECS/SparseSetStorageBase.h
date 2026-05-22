@@ -4,9 +4,11 @@
 #include "SparseSet.h"
 
 template<typename T>
-class ComponentStorageBase :public StorageBase
+class SparseSetStorageBase :public StorageBase
 {
 public:
+	// コンストラクタ
+	SparseSetStorageBase() = default;
 	/// <summary>
 	/// 取得
 	/// </summary>
@@ -48,7 +50,7 @@ public:
 	std::vector<int>* GetEntities() { return sparseSet.GetEntities(); }
 
 	// 仮想デストラクタ
-	virtual ~ComponentStorageBase() = default;
+	virtual ~SparseSetStorageBase() = default;
 protected:
 	SparseSet<T> sparseSet{};
 };

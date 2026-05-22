@@ -1,10 +1,10 @@
 #pragma once
 
-#include "ComponentStorageBase.h"
+#include "SparseSetStorageBase.h"
 
 #include "TransformComponent.h"
 
-class TransformComponentStorage :public ComponentStorageBase<TransformComponent>
+class TransformComponentStorage :public SparseSetStorageBase<TransformComponent>
 {
 public:
 	TransformComponentStorage()

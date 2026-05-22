@@ -3,7 +3,7 @@
 #include <typeindex>
 #include <memory>
 
-#include "ComponentStorageBase.h"
+#include "SparseSetStorageBase.h"
 
 class IWorld
 {
@@ -14,7 +14,7 @@ public:
 	/// <typeparam name="T">取得したいストレージ</typeparam>
 	/// <returns></returns>
 	template<typename T>
-	ComponentStorageBase<T>* GetStorage()
+	SparseSetStorageBase<T>* GetStorage()
 	{
 		auto it{ storageMap.find(std::type_index(typeid(T))) };
 
@@ -23,7 +23,7 @@ public:
 			return nullptr;
 		}
 
-		return static_cast<ComponentStorageBase<T>*>(storages[it->second].get());
+		return static_cast<SparseSetStorageBase<T>*>(storages[it->second].get());
 	}
 
 	// 仮想デストラクタ
