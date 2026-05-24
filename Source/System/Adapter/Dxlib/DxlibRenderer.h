@@ -4,11 +4,19 @@
 
 class DxlibRenderer :public IRenderer
 {
+	// カメラ関連
+	// カメラセット
+	void SetCamera() override;
+	// ---ダブルバッファリング用---
+	// 垂直同期信号を待つ
+	int ClearDrawScreen() override;
+	// ダブルバッファリングの反転
+	int ScreenFlip() override;
 	// ---読み込み関数---
 	// モデルの読み込み
-	int LoadModel(const TCHAR* _fileName) override;
+	int LoadModel(const std::string* _fileName) override;
 	// 画像の読み込み
-	int LoadGraph(const TCHAR* _fileName) override;
+	int LoadGraph(const std::string* _fileName) override;
 	/// <summary>
 	/// 画像の分割読み込み
 	/// </summary>
@@ -19,7 +27,7 @@ class DxlibRenderer :public IRenderer
 	/// <param name="_xSize">分割した一つの横幅</param>
 	/// <param name="_ySize">分割した一つの縦幅</param>
 	/// <param name="handleBuf">配列のアドレス</param>
-	void LoadDivGraph(const TCHAR* _fileName, int _allNum, int _xNum, int _yNum, int _xSize, int _ySize, int* _handleBuf) override;
+	void LoadDivGraph(const std::string* _fileName, int _allNum, int _xNum, int _yNum, int _xSize, int _ySize, int* _handleBuf) override;
 	// モデル情報セット系
 	// 行列セット
 	void ModelSetMatrix(int _handle, Matrix4x4 _mat) override;

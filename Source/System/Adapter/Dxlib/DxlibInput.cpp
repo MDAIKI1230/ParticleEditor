@@ -1,5 +1,7 @@
 #include <DxLib.h>
 
+#include "DxlibConstants.h"
+
 #include "DxlibInput.h"
 
 // 更新
@@ -13,19 +15,19 @@ void DxlibInput::Update()
 }
 
 // キーが押されたとき
-bool DxlibInput::GetKeyPush(int keyCode)
+bool DxlibInput::GetKeyPush(KeyConstants keyCode)
 {
-	return (currentKeyState[keyCode] == 1) && (pastKeyState[keyCode] == 0);
+	return (currentKeyState[KeyTable[(int)keyCode]] == 1) && (pastKeyState[KeyTable[(int)keyCode]] == 0);
 }
 
 // キーが話されたとき
-bool DxlibInput::GetKeyRelease(int keyCode)
+bool DxlibInput::GetKeyRelease(KeyConstants keyCode)
 {
-	return (currentKeyState[keyCode] == 0) && (pastKeyState[keyCode] == 1);
+	return (currentKeyState[KeyTable[(int)keyCode]] == 0) && (pastKeyState[KeyTable[(int)keyCode]] == 1);
 }
 
 // キーが押されている間
-bool DxlibInput::GetKeyPress(int keyCode)
+bool DxlibInput::GetKeyPress(KeyConstants keyCode)
 {
-	return (currentKeyState[keyCode] == 1);
+	return (currentKeyState[KeyTable[(int)keyCode]] == 1);
 }

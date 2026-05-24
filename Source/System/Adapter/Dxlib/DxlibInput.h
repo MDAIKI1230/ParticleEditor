@@ -8,9 +8,9 @@ public:
 	// 更新
 	void Update();
 	// キーが押されたとき
-	bool GetKeyPush(int keyCode);
+	bool GetKeyPush(KeyConstants keyCode);
 	// キーが話されたとき
-	bool GetKeyRelease(int keyCode);
+	bool GetKeyRelease(KeyConstants keyCode);
 	// キーが押されている間
-	bool GetKeyPress(int keyCode);
+	bool GetKeyPress(KeyConstants keyCode);
 };

@@ -150,6 +150,7 @@
     <ClCompile Include="Source\Common\Math\Vector\Vector3\Vector3.cpp" />
     <ClCompile Include="Source\Common\Math\Vector\Vector3\Vector3Int.cpp" />
     <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Source\System\Adapter\Dxlib\DxlibSystem.cpp" />
     <ClCompile Include="Source\System\Adapter\Dxlib\DxlibInput.cpp" />
     <ClCompile Include="Source\System\Adapter\Dxlib\DxlibRenderer.cpp" />
     <ClCompile Include="Source\System\ApplicationManager.cpp" />
@@ -167,9 +168,11 @@
     <ClInclude Include="Source\Common\BaseClass\StorageBase.h" />
     <ClInclude Include="Source\Common\BaseClass\SystemBase.h" />
     <ClInclude Include="Source\Common\Constants\BaseConstants.h" />
+    <ClInclude Include="Source\Common\Constants\KeyConstants.h" />
     <ClInclude Include="Source\Common\Constants\SceneConstants.h" />
     <ClInclude Include="Source\Common\ECS\ComponentStorageBase.h" />
     <ClInclude Include="Source\Common\ECS\SparseSet.h" />
+    <ClInclude Include="Source\Common\Interface\ISystem.h" />
     <ClInclude Include="Source\Common\Interface\IInput.h" />
     <ClInclude Include="Source\Common\Interface\IRenderer.h" />
     <ClInclude Include="Source\Common\Interface\IWorld.h" />
@@ -184,6 +187,9 @@
     <ClInclude Include="Source\Common\Math\Vector\Vector2\Vector2Int.h" />
     <ClInclude Include="Source\Common\Math\Vector\Vector3\Vector3.h" />
     <ClInclude Include="Source\Common\Math\Vector\Vector3\Vector3Int.h" />
+    <ClInclude Include="Source\System\Adapter\Dxlib\DxlibConstants.h" />
+    <ClInclude Include="Source\System\Adapter\Dxlib\DxlibConvert.h" />
+    <ClInclude Include="Source\System\Adapter\Dxlib\DxlibSystem.h" />
     <ClInclude Include="Source\System\Adapter\Dxlib\DxlibInput.h" />
     <ClInclude Include="Source\System\Adapter\Dxlib\DxlibRenderer.h" />
     <ClInclude Include="Source\System\ApplicationManager.h" />

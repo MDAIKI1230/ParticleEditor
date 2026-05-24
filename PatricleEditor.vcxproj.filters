@@ -141,6 +141,9 @@
     <ClCompile Include="Source\System\Adapter\Dxlib\DxlibInput.cpp">
       <Filter>ソース ファイル\System\Adapter\Dxlib</Filter>
     </ClCompile>
+    <ClCompile Include="Source\System\Adapter\Dxlib\DxlibSystem.cpp">
+      <Filter>ソース ファイル\System\Adapter\Dxlib</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\System\ApplicationManager.h">
@@ -253,6 +256,21 @@
     </ClInclude>
     <ClInclude Include="Source\System\Adapter\Dxlib\DxlibInput.h">
       <Filter>ソース ファイル\System\Adapter\Dxlib</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Adapter\Dxlib\DxlibConvert.h">
+      <Filter>ソース ファイル\System\Adapter\Dxlib</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Adapter\Dxlib\DxlibSystem.h">
+      <Filter>ソース ファイル\System\Adapter\Dxlib</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\Interface\ISystem.h">
+      <Filter>ソース ファイル\Common\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Adapter\Dxlib\DxlibConstants.h">
+      <Filter>ソース ファイル\System\Adapter\Dxlib</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\Constants\KeyConstants.h">
+      <Filter>ソース ファイル\Common\Constants</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

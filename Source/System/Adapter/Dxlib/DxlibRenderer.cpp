@@ -1,17 +1,34 @@
 #include <DxLib.h>
 
+#include "DxlibConvert.h"
+
 #include "DxlibRenderer.h"
 
-// モデルの読み込み
-int DxlibRenderer::LoadModel(const TCHAR* _fileName)
+void DxlibRenderer::SetCamera()
 {
-	return DxLib::MV1LoadModel(_fileName);
+
+}
+
+int DxlibRenderer::ClearDrawScreen()
+{
+	return DxLib::ClearDrawScreen();
+}
+
+int DxlibRenderer::ScreenFlip()
+{
+	return DxLib::ScreenFlip();
+}
+
+// モデルの読み込み
+int DxlibRenderer::LoadModel(const std::string* _fileName)
+{
+	return DxLib::MV1LoadModel(std::wstring(_fileName->begin(), _fileName->end()).c_str());
 }
 
 // 画像の読み込み
-int DxlibRenderer::LoadGraph(const TCHAR* _fileName)
+int DxlibRenderer::LoadGraph(const std::string* _fileName)
 {
-	return DxLib::LoadGraph(_fileName);
+	return DxLib::LoadGraph(std::wstring(_fileName->begin(), _fileName->end()).c_str());
 }
 
 /// <summary>
@@ -24,16 +41,16 @@ int DxlibRenderer::LoadGraph(const TCHAR* _fileName)
 /// <param name="_xSize">分割した一つの横幅</param>
 /// <param name="_ySize">分割した一つの縦幅</param>
 /// <param name="handleBuf">配列のアドレス</param>
-void DxlibRenderer::LoadDivGraph(const TCHAR* _fileName, int _allNum, int _xNum, int _yNum, int _xSize, int _ySize, int* _handleBuf)
+void DxlibRenderer::LoadDivGraph(const std::string* _fileName, int _allNum, int _xNum, int _yNum, int _xSize, int _ySize, int* _handleBuf)
 {
-	DxLib::LoadDivGraph(_fileName, _allNum, _xNum, _yNum, _xSize, _ySize, _handleBuf);
+	DxLib::LoadDivGraph(std::wstring(_fileName->begin(), _fileName->end()).c_str(), _allNum, _xNum, _yNum, _xSize, _ySize, _handleBuf);
 }
 
 // モデル情報セット系
 // 行列セット
 void DxlibRenderer::ModelSetMatrix(int _handle, Matrix4x4 _mat)
 {
-	DxLib::MV1SetMatrix(_handle, _mat);
+	DxLib::MV1SetMatrix(_handle, ToDxlib(_mat));
 }
 
 // ---描画関数---

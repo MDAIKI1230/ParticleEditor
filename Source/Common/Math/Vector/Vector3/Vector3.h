@@ -1,6 +1,5 @@
 #pragma once
 
-#include <DxLib.h>
 #include "../SIMD/SIMDVector.h"
 
 struct alignas(16) Vector3
@@ -53,20 +52,10 @@ public:
 	{
 	}
 
-	Vector3(VECTOR _vec) :
-		simd(_vec.x, _vec.y, _vec.z, 0.0f)
-	{
-	}
-
 	// 型変換
 	operator SIMDVectorFloat() const
 	{
 		return simd;
-	}
-
-	operator VECTOR() const
-	{
-		return VGet(x, y, z);
 	}
 
 	// 加算

@@ -1,4 +1,4 @@
-#include <DxLib.h>
+#include <Windows.h>
 #include <memory>
 #include "System/ApplicationManager.h"
 
