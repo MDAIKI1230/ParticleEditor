@@ -74,7 +74,7 @@ void SceneBase::AddSystem(std::unique_ptr<SystemBase> _system)
 // </summary>
 /// <param name="storage">入れたいストレージ</param>
 template<typename T>
-void SceneBase::AddStorage(std::unique_ptr<ComponentStorageBase<T>> _storage)
+void SceneBase::AddStorage(std::unique_ptr<SparseSetStorageBase<T>> _storage)
 {
 	// コンテナに追加
 	storages.push_back(std::move(_storage));

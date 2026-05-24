@@ -27,6 +27,8 @@ void DebugScene::Initialize()
 	GetStorage<TransformComponent>()->Add(0, trans);
 
 	state = SceneState::UPDATE;
+
+	
 }
 // 終了
 void DebugScene::Terminate()

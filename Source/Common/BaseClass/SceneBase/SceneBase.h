@@ -10,7 +10,7 @@
 
 #include "SystemBase.h"
 #include "StorageBase.h"
-#include "ComponentStorageBase.h"
+#include "SparseSetStorageBase.h"
 
 class SceneBase:public IWorld
 {
@@ -30,7 +30,7 @@ protected:
 	/// </summary>
 	/// <param name="storage">入れたいストレージ</param>
 	template<typename T>
-	void AddStorage(std::unique_ptr<ComponentStorageBase<T>> _storage);
+	void AddStorage(std::unique_ptr<SparseSetStorageBase<T>> _storage);
 	void FadeIn();
 	void FadeOut();
 	virtual void Initialize() = 0;
