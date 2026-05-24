@@ -3,13 +3,14 @@
 #include <string>
 
 #include "MDMath.h"
+#include "Camera.h"
 
 class IRenderer
 {
 public:
 	// カメラ関連
 	// カメラセット
-	virtual void SetCamera() = 0;
+	virtual void SetCamera(const Camera& _camera) = 0;
 	// ---ダブルバッファリング用---
 	// 垂直同期信号を待つ
 	virtual int ClearDrawScreen() = 0;
@@ -17,9 +18,9 @@ public:
 	virtual int ScreenFlip() = 0;
 	// ---読み込み関数---
 	// モデルの読み込み
-	virtual int LoadModel(const std::string* _fileName) = 0;
+	virtual int LoadModel(const std::string& _fileName) = 0;
 	// 画像の読み込み
-	virtual int LoadGraph(const std::string* _fileName) = 0;
+	virtual int LoadGraph(const std::string& _fileName) = 0;
 	/// <summary>
 	/// 画像の分割読み込み
 	/// </summary>
@@ -30,7 +31,7 @@ public:
 	/// <param name="_xSize">分割した一つの横幅</param>
 	/// <param name="_ySize">分割した一つの縦幅</param>
 	/// <param name="handleBuf">配列のアドレス</param>
-	virtual void LoadDivGraph(const std::string* _fileName, int _allNum, int _xNum, int _yNum, int _xSize, int _ySize, int* _handleBuf) = 0;
+	virtual void LoadDivGraph(const std::string& _fileName, int _allNum, int _xNum, int _yNum, int _xSize, int _ySize, int* _handleBuf) = 0;
 	// モデル情報セット系
 	// 行列セット
 	virtual void ModelSetMatrix(int _handle, Matrix4x4 _mat) = 0;

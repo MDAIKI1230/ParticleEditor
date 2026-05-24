@@ -79,6 +79,9 @@
     <Filter Include="ソース ファイル\System\Adapter\Dxlib">
       <UniqueIdentifier>{4f7f0f70-669b-4f62-b59d-77b25690c1d2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Objects">
+      <UniqueIdentifier>{ed8f9155-6f7a-48a4-85bc-9f320f32f0ad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Main.cpp">
@@ -271,6 +274,9 @@
     </ClInclude>
     <ClInclude Include="Source\Common\Constants\KeyConstants.h">
       <Filter>ソース ファイル\Common\Constants</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Objects\Camera.h">
+      <Filter>ソース ファイル\Objects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
