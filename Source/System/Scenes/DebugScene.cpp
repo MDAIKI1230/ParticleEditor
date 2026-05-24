@@ -1,10 +1,9 @@
-#include <DxLib.h>
+#include "ServiceLocator.h"
 
 #include "RendererComponent.h"
 #include "RendererComponentStorage.h"
 
 #include "TransformComponent.h"
-#include "TransformComponentStorage.h"
 
 #include "DebugScene.h"
 
@@ -16,9 +15,10 @@ DebugScene::DebugScene()
 // 初期化
 void DebugScene::Initialize()
 {
-	SetCameraPositionAndTarget_UpVecY(Vector3{ 0,0,-100.0f }, Vector3{ 0,0,0 });
+	Camera camera{ Vector3{0,0,-100},Vector3{0,0,0} };
+	ServiceLocator::GetRenderer()->SetCamera(camera);
 
-	RendererComponent renderer{ MV1LoadModel(L"Res/Model/M_001_player_073_01.mv1") };
+	RendererComponent renderer{ ServiceLocator::GetRenderer()->LoadModel(std::string{"Res/Model/M_001_player_073_01.mv1"}) };
 	
 	GetStorage<RendererComponent>()->Add(0,renderer);
 
