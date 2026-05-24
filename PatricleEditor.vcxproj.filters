@@ -73,8 +73,14 @@
     <Filter Include="ソース ファイル\System\Components">
       <UniqueIdentifier>{54506658-5fe2-4830-ac9b-c29613297c3c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\System\Factory">
-      <UniqueIdentifier>{aa807ac1-0226-48c6-b3fc-fd2cd373f4cc}</UniqueIdentifier>
+    <Filter Include="ソース ファイル\System\Adapter">
+      <UniqueIdentifier>{432edb92-0af0-4a2f-be9a-2a5a30b74805}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\System\Adapter\Dxlib">
+      <UniqueIdentifier>{4f7f0f70-669b-4f62-b59d-77b25690c1d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Objects">
+      <UniqueIdentifier>{ed8f9155-6f7a-48a4-85bc-9f320f32f0ad}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -93,17 +99,11 @@
     <ClCompile Include="Source\System\ResourceManager.cpp">
       <Filter>ソース ファイル\System\Manager</Filter>
     </ClCompile>
-    <ClCompile Include="Source\System\InputManager.cpp">
-      <Filter>ソース ファイル\System\Manager</Filter>
-    </ClCompile>
     <ClCompile Include="Source\System\SceneManager.cpp">
       <Filter>ソース ファイル\System\Manager</Filter>
     </ClCompile>
     <ClCompile Include="Source\Common\BaseClass\SceneBase\SceneBase.cpp">
       <Filter>ソース ファイル\Common\BaseClass\SceneBase</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\System\ServiceLocator.cpp">
-      <Filter>ソース ファイル\System\Manager</Filter>
     </ClCompile>
     <ClCompile Include="Source\Common\Math\Vector\SIMD\SIMDVectorMath.cpp">
       <Filter>ソース ファイル\Common\Math\Vector\SIMD</Filter>
@@ -138,6 +138,15 @@
     <ClCompile Include="Source\System\Scenes\DebugScene.cpp">
       <Filter>ソース ファイル\System\Manager\Scenes</Filter>
     </ClCompile>
+    <ClCompile Include="Source\System\Adapter\Dxlib\DxlibRenderer.cpp">
+      <Filter>ソース ファイル\System\Adapter\Dxlib</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\Adapter\Dxlib\DxlibInput.cpp">
+      <Filter>ソース ファイル\System\Adapter\Dxlib</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\Adapter\Dxlib\DxlibSystem.cpp">
+      <Filter>ソース ファイル\System\Adapter\Dxlib</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\System\ApplicationManager.h">
@@ -150,9 +159,6 @@
       <Filter>ソース ファイル\System\Manager</Filter>
     </ClInclude>
     <ClInclude Include="Source\System\ResourceManager.h">
-      <Filter>ソース ファイル\System\Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\System\InputManager.h">
       <Filter>ソース ファイル\System\Manager</Filter>
     </ClInclude>
     <ClInclude Include="Source\Common\Constants\BaseConstants.h">
@@ -242,8 +248,35 @@
     <ClInclude Include="Source\System\Scenes\DebugScene.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Source\System\Factory\TransformComponentFactory.h">
-      <Filter>ソース ファイル\System\Factory</Filter>
+    <ClInclude Include="Source\Common\Interface\IRenderer.h">
+      <Filter>ソース ファイル\Common\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Adapter\Dxlib\DxlibRenderer.h">
+      <Filter>ソース ファイル\System\Adapter\Dxlib</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\Interface\IInput.h">
+      <Filter>ソース ファイル\Common\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Adapter\Dxlib\DxlibInput.h">
+      <Filter>ソース ファイル\System\Adapter\Dxlib</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Adapter\Dxlib\DxlibConvert.h">
+      <Filter>ソース ファイル\System\Adapter\Dxlib</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Adapter\Dxlib\DxlibSystem.h">
+      <Filter>ソース ファイル\System\Adapter\Dxlib</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\Interface\ISystem.h">
+      <Filter>ソース ファイル\Common\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Adapter\Dxlib\DxlibConstants.h">
+      <Filter>ソース ファイル\System\Adapter\Dxlib</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\Constants\KeyConstants.h">
+      <Filter>ソース ファイル\Common\Constants</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Objects\Camera.h">
+      <Filter>ソース ファイル\Objects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
