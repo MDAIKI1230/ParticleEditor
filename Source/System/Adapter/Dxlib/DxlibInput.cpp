@@ -1,7 +1,9 @@
 #include <DxLib.h>
-#include "InputManager.h"
 
-void InputManager::Update()
+#include "DxlibInput.h"
+
+// 更新
+void DxlibInput::Update()
 {
 	for (int i = 0; i < 256; i++)
 	{
@@ -10,17 +12,20 @@ void InputManager::Update()
 	GetHitKeyStateAll(currentKeyState);
 }
 
-bool InputManager::GetKeyPush(int keyCode)
+// キーが押されたとき
+bool DxlibInput::GetKeyPush(int keyCode)
 {
 	return (currentKeyState[keyCode] == 1) && (pastKeyState[keyCode] == 0);
 }
 
-bool InputManager::GetKeyRelease(int keyCode)
+// キーが話されたとき
+bool DxlibInput::GetKeyRelease(int keyCode)
 {
 	return (currentKeyState[keyCode] == 0) && (pastKeyState[keyCode] == 1);
 }
 
-bool InputManager::GetKeyPress(int keyCode)
+// キーが押されている間
+bool DxlibInput::GetKeyPress(int keyCode)
 {
 	return (currentKeyState[keyCode] == 1);
 }

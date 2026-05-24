@@ -3,6 +3,7 @@
 #include "ServiceLocator.h"
 
 #include "Dxlib\DxlibRenderer.h"
+#include "Dxlib\DxlibInput.h"
 
 #include "ApplicationManager.h"
 
@@ -13,13 +14,13 @@ ApplicationManager::ApplicationManager()
 
 	// 生成
 	renderer = std::make_unique<DxlibRenderer>();
-	inputManager = std::make_unique<InputManager>();
+	input = std::make_unique<DxlibInput>();
 	sceneManager = std::make_unique<SceneManager>();
 	timeManager = std::make_unique<TimeManager>();
 
 	// サービスロケータに登録
 	ServiceLocator::SetRenderer(renderer.get());
-	ServiceLocator::SetInputManager(inputManager.get());
+	ServiceLocator::SetInput(input.get());
 	ServiceLocator::SetTimeManager(timeManager.get());
 }
 
@@ -32,7 +33,7 @@ int ApplicationManager::ApplicationMain()
 
 	while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0)
 	{
-		inputManager->Update();
+		input->Update();
 		timeManager->Update();
 
 		ClearDrawScreen();

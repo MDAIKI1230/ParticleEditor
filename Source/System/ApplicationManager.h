@@ -1,7 +1,7 @@
 #pragma once
 
 #include "IRenderer.h"
-#include "InputManager.h"
+#include "IInput.h"
 #include "SceneManager.h"
 #include "TimeManager.h"
 
@@ -12,7 +12,7 @@ public:
 	int ApplicationMain();
 private:
 	std::unique_ptr<IRenderer> renderer;
-	std::unique_ptr<InputManager> inputManager;
+	std::unique_ptr<IInput> input;
 	std::unique_ptr<SceneManager> sceneManager;
 	std::unique_ptr<TimeManager> timeManager;
 };

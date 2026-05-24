@@ -1,9 +1,11 @@
 #pragma once
 
-class InputManager
+#include "IInput.h"
+
+class DxlibInput:public IInput
 {
 public:
-	InputManager() = default;
+	// 更新
 	void Update();
 	// キーが押されたとき
 	bool GetKeyPush(int keyCode);
@@ -11,7 +13,4 @@ public:
 	bool GetKeyRelease(int keyCode);
 	// キーが押されている間
 	bool GetKeyPress(int keyCode);
-private:
-	char pastKeyState[256];
-	char currentKeyState[256];
 };

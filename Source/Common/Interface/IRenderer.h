@@ -34,4 +34,6 @@ public:
 	virtual void DeleteModel(int _handle) = 0;
 	// 画像素材削除
 	virtual void DeleteGraph(int _handle) = 0;
+	// デストラクタ
+	virtual ~IRenderer() = default;
 };
