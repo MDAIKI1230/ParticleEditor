@@ -1,15 +1,14 @@
 #pragma once
 
-#include "MDMath.h"
+#include "IRenderer.h"
 
-class IRenderer
+class DxlibRenderer :public IRenderer
 {
-public:
 	// ---読み込み関数---
 	// モデルの読み込み
-	virtual int LoadModel(const TCHAR* _fileName) = 0;
+	int LoadModel(const TCHAR* _fileName) override;
 	// 画像の読み込み
-	virtual int LoadGraph(const TCHAR* _fileName) = 0;
+	int LoadGraph(const TCHAR* _fileName) override;
 	/// <summary>
 	/// 画像の分割読み込み
 	/// </summary>
@@ -20,18 +19,18 @@ public:
 	/// <param name="_xSize">分割した一つの横幅</param>
 	/// <param name="_ySize">分割した一つの縦幅</param>
 	/// <param name="handleBuf">配列のアドレス</param>
-	virtual void LoadDivGraph(const TCHAR* _fileName, int _allNum, int _xNum, int _yNum, int _xSize, int _ySize, int* _handleBuf) = 0;
+	void LoadDivGraph(const TCHAR* _fileName, int _allNum, int _xNum, int _yNum, int _xSize, int _ySize, int* _handleBuf) override;
 	// モデル情報セット系
 	// 行列セット
-	virtual void ModelSetMatrix(int _handle, Matrix4x4 _mat) = 0;
+	void ModelSetMatrix(int _handle, Matrix4x4 _mat) override;
 	// ---描画関数---
 	// モデル描画
-	virtual void DrawModel(int _handle) = 0;
+	void DrawModel(int _handle) override;
 	// 画像描画
-	virtual void DrawGraph(Vector2* vec, int _handle, bool _transFlag) = 0;
+	void DrawGraph(Vector2* vec, int _handle, bool _transFlag) override;
 	// ---リソース削除関数---
 	// モデル素材削除
-	virtual void DeleteModel(int _handle) = 0;
+	void DeleteModel(int _handle) override;
 	// 画像素材削除
-	virtual void DeleteGraph(int _handle) = 0;
+	void DeleteGraph(int _handle) override;
 };

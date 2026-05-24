@@ -1,4 +1,4 @@
-#include <DxLib.h>
+#include "ServiceLocator.h"
 
 #include "TransformComponent.h"
 #include "RendererComponentStorage.h"
@@ -27,8 +27,8 @@ void RenderingSystem::Update(IWorld* world)
 		// レンダー
 		RendererComponent* renderer{ rendererStorage->Get(id) };
 		// 行列をセット
-		MV1SetMatrix(renderer->GetHandle(), trans.GetWorldMatrix());
+		ServiceLocator::GetRenderer()->ModelSetMatrix(renderer->GetHandle(), trans.GetWorldMatrix());
 		// 描画
-		MV1DrawModel(renderer->GetHandle());
+		ServiceLocator::GetRenderer()->DrawModel(renderer->GetHandle());
 	}
 }

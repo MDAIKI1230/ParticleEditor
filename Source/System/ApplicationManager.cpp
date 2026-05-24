@@ -1,8 +1,8 @@
-#include <DxLib.h>
-
 #include "BaseConstants.h"
 
 #include "ServiceLocator.h"
+
+#include "Dxlib\DxlibRenderer.h"
 
 #include "ApplicationManager.h"
 
@@ -11,12 +11,14 @@ ApplicationManager::ApplicationManager()
 	ChangeWindowMode(true);
 	SetGraphMode(Config::WINDOW_SIZE_W, Config::WINDOW_SIZE_H, Config::COLOR_BIT);
 
-	// マネージャー生成
+	// 生成
+	renderer = std::make_unique<DxlibRenderer>();
 	inputManager = std::make_unique<InputManager>();
 	sceneManager = std::make_unique<SceneManager>();
 	timeManager = std::make_unique<TimeManager>();
 
 	// サービスロケータに登録
+	ServiceLocator::SetRenderer(renderer.get());
 	ServiceLocator::SetInputManager(inputManager.get());
 	ServiceLocator::SetTimeManager(timeManager.get());
 }
