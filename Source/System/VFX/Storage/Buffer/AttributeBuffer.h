@@ -1,7 +1,5 @@
 #pragma once
 
-#include <memory>
-
 #include "IAttributeBuffer.h"
 
 #include "SparseSet.h"
@@ -13,13 +11,29 @@ class AttributeBuffer:public IAttributeBuffer
 {
 public:
 	// コンストラクタ
-	AttributeBuffer(size_t _size);
+	AttributeBuffer(size_t _size) :
+		allocator{ _size }
+	{
+		cpuData.Reserve(_size);
+	}
+
+	// CPUデータ取得
+	T& operator[](size_t _index)
+	{
+		return cpuData.Get(_index);
+	}
+
 	// GPUにデータを送る？
-	void Upload() override;
-	// サイズ分生成
-	void Resize(size_t _size) override;
+	void Upload() override
+	{
+
+	}
+
 	// GPUメモリからCPUメモリにキャッシュ
-	void ReadBack() override;
+	void ReadBack() override
+	{
+
+	}
 private:
 	// アロケータ
 	LinearAllocator allocator;
