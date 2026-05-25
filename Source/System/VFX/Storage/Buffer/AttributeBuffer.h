@@ -18,9 +18,9 @@ public:
 	}
 
 	// CPUデータ取得
-	T& operator[](size_t _index)
+	SparseSet<T>* GetCPUData()
 	{
-		return cpuData.Get(_index);
+		return &cpuData;
 	}
 
 	// GPUにデータを送る？
@@ -39,6 +39,6 @@ private:
 	LinearAllocator allocator;
 	// GPUBufferクラス
 	GPUBuffer gpuBuffer;
-	// 値
+	// CPUデータ
 	SparseSet<T> cpuData;
 };
