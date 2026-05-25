@@ -106,6 +106,12 @@
     <Filter Include="ソース ファイル\System\VFX\Instance\Module">
       <UniqueIdentifier>{2ea426d3-128c-437f-8821-38680b6e6999}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\System\VFX\Storage\Buffer">
+      <UniqueIdentifier>{dc866810-c7fb-4766-b93d-f282b8b38cb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\System\VFX\Storage\Allocator">
+      <UniqueIdentifier>{661437c9-36d8-4563-9aeb-da93312a304f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Main.cpp">
@@ -171,6 +177,12 @@
     <ClCompile Include="Source\System\Adapter\Dxlib\DxlibSystem.cpp">
       <Filter>ソース ファイル\System\Adapter\Dxlib</Filter>
     </ClCompile>
+    <ClCompile Include="Source\System\VFX\Storage\Allocator\LinearAllocator.cpp">
+      <Filter>ソース ファイル\System\VFX\Storage\Allocator</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\VFX\Storage\Buffer\AttributeBuffer.cpp">
+      <Filter>ソース ファイル\System\VFX\Storage\Buffer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\System\ApplicationManager.h">
@@ -211,9 +223,6 @@
     </ClInclude>
     <ClInclude Include="Source\Common\Interface\IWorld.h">
       <Filter>ソース ファイル\Common\Interface</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Common\ECS\SparseSetStorageBase.h">
-      <Filter>ソース ファイル\Common\ECS</Filter>
     </ClInclude>
     <ClInclude Include="Source\Common\BaseClass\SceneBase\SceneBase.h">
       <Filter>ソース ファイル\Common\BaseClass\SceneBase</Filter>
@@ -302,14 +311,38 @@
     <ClInclude Include="Source\Objects\Camera.h">
       <Filter>ソース ファイル\Objects</Filter>
     </ClInclude>
-    <ClInclude Include="Source\System\Components\VFXComponent.h">
+    <ClInclude Include="Source\Common\ECS\ComponentStorageBase.h">
       <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\VFX\System\SimulatePipeline.h">
+      <Filter>ソース ファイル\System\VFX\System</Filter>
     </ClInclude>
     <ClInclude Include="Source\System\VFX\Instance\VFXInstance.h">
       <Filter>ソース ファイル\System\VFX\Instance</Filter>
     </ClInclude>
     <ClInclude Include="Source\System\VFX\Storage\VFXInstanceStorage.h">
       <Filter>ソース ファイル\System\VFX\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\Constants\VFXConstants.h">
+      <Filter>ソース ファイル\Common\Constants</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\VFX\Storage\Buffer\IAttributeBuffer.h">
+      <Filter>ソース ファイル\System\VFX\Storage\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\VFX\Storage\Allocator\Allocation.h">
+      <Filter>ソース ファイル\System\VFX\Storage\Allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\VFX\Storage\Allocator\Allocator.h">
+      <Filter>ソース ファイル\System\VFX\Storage\Allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\VFX\Storage\Allocator\LinearAllocator.h">
+      <Filter>ソース ファイル\System\VFX\Storage\Allocator</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\VFX\Storage\Buffer\AttributeBuffer.h">
+      <Filter>ソース ファイル\System\VFX\Storage\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\VFX\Storage\Buffer\GPUBuffer.h">
+      <Filter>ソース ファイル\System\VFX\Storage\Buffer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
