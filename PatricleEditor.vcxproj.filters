@@ -180,9 +180,6 @@
     <ClCompile Include="Source\System\VFX\Storage\Allocator\LinearAllocator.cpp">
       <Filter>ソース ファイル\System\VFX\Storage\Allocator</Filter>
     </ClCompile>
-    <ClCompile Include="Source\System\VFX\Storage\Buffer\AttributeBuffer.cpp">
-      <Filter>ソース ファイル\System\VFX\Storage\Buffer</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\System\ApplicationManager.h">
@@ -343,6 +340,18 @@
     </ClInclude>
     <ClInclude Include="Source\System\VFX\Storage\Buffer\GPUBuffer.h">
       <Filter>ソース ファイル\System\VFX\Storage\Buffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\ECS\SparseSetStorageBase.h">
+      <Filter>ソース ファイル\Common\ECS</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Components\VFXComponent.h">
+      <Filter>ソース ファイル\System\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\VFX\Instance\Emitter\Emitter.h">
+      <Filter>ソース ファイル\System\VFX\Instance\Emitter</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\VFX\Instance\Module\Module.h">
+      <Filter>ソース ファイル\System\VFX\Instance\Module</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
