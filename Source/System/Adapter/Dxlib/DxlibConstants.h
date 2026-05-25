@@ -1,6 +1,6 @@
 #pragma once
 
-#include "DxLib.h"
+#include <DxLib.h>
 #include "KeyConstants.h"
 
 // 独自の列挙体とDxlibとの対応付け
