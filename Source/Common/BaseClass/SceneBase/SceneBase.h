@@ -9,7 +9,6 @@
 #include "IWorld.h"
 
 #include "SystemBase.h"
-#include "StorageBase.h"
 #include "SparseSetStorageBase.h"
 
 class SceneBase:public IWorld

@@ -129,14 +129,14 @@ Quaternion Quaternion::AngleAxis(float _rad, const Vector3& _axis)
 Quaternion Quaternion::Euler(float _pitch, float _yaw, float _roll)
 {
 	// yaw
-	float cy = cos(_yaw * 0.5f);
-	float sy = sin(_yaw * 0.5f);
+	float cy = cosf(_yaw * 0.5f);
+	float sy = sinf(_yaw * 0.5f);
 	// pitch
-	float cp = cos(_pitch * 0.5f);
-	float sp = sin(_pitch * 0.5f);
+	float cp = cosf(_pitch * 0.5f);
+	float sp = sinf(_pitch * 0.5f);
 	// roll
-	float cr = cos(_roll * 0.5f);
-	float sr = sin(_roll * 0.5f);
+	float cr = cosf(_roll * 0.5f);
+	float sr = sinf(_roll * 0.5f);
 
 	return
 	{

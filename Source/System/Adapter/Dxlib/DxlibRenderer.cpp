@@ -64,7 +64,7 @@ void DxlibRenderer::DrawModel(int _handle)
 // 画像描画
 void DxlibRenderer::DrawGraph(Vector2* vec, int _handle, bool _transFlag)
 {
-	DxLib::DrawGraph(vec->x, vec->y, _handle, _transFlag);
+	DxLib::DrawGraph(static_cast<int>(vec->x), static_cast<int>(vec->y), _handle, _transFlag);
 }
 
 // ---リソース削除関数---

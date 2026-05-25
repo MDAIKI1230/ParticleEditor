@@ -78,13 +78,13 @@ SIMDVectorFloat SIMDVectorMath::Cross3(const SIMDVectorFloat& _vec1, const SIMDV
 // 長さ(Vector2)
 float SIMDVectorMath::Length2(const SIMDVectorFloat& _vec)
 {
-	return sqrt(Dot2(_vec, _vec));
+	return sqrtf(Dot2(_vec, _vec));
 }
 
 // 長さ(Vector3)
 float SIMDVectorMath::Length3(const SIMDVectorFloat& _vec)
 {
-	return sqrt(Dot3(_vec, _vec));
+	return sqrtf(Dot3(_vec, _vec));
 }
 
 // 正規化
