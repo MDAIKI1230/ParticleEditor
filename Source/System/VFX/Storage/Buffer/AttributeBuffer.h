@@ -12,6 +12,8 @@ template<typename T>
 class AttributeBuffer:public IAttributeBuffer
 {
 public:
+	// コンストラクタ
+	AttributeBuffer(size_t _size);
 	// GPUにデータを送る？
 	void Upload() override;
 	// サイズ分生成
