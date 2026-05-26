@@ -155,8 +155,6 @@
     <ClCompile Include="Source\System\Adapter\Dxlib\DxlibRenderer.cpp" />
     <ClCompile Include="Source\System\ApplicationManager.cpp" />
     <ClCompile Include="Source\System\ComponentSystem\ModelRenderringSystem.cpp" />
-    <ClCompile Include="Source\System\ComponentSystem\VFXRenderingSystem.cpp" />
-    <ClCompile Include="Source\System\ComponentSystem\VFXSimulateSystem.cpp" />
     <ClCompile Include="Source\System\ObjectManager.cpp" />
     <ClCompile Include="Source\System\ResourceManager.cpp" />
     <ClCompile Include="Source\System\SceneManager.cpp" />
@@ -207,8 +205,6 @@
     <ClInclude Include="Source\System\ComponentStorage\TransformComponentStorage.h" />
     <ClInclude Include="Source\System\ComponentStorage\VFXComponentStorage.h" />
     <ClInclude Include="Source\System\ComponentSystem\ModelRenderingSystem.h" />
-    <ClInclude Include="Source\System\ComponentSystem\VFXRenderingSystem.h" />
-    <ClInclude Include="Source\System\ComponentSystem\VFXSimulateSystem.h" />
     <ClInclude Include="Source\System\Components\RendererComponent.h" />
     <ClInclude Include="Source\System\Components\TransformComponent.h" />
     <ClInclude Include="Source\System\Components\VFXComponent.h" />
