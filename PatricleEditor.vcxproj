@@ -215,6 +215,7 @@
     <ClInclude Include="Source\System\Scenes\DebugScene.h" />
     <ClInclude Include="Source\System\ServiceLocator.h" />
     <ClInclude Include="Source\System\TimeManager.h" />
+    <ClInclude Include="Source\System\VFX\Asset\VFXAsset.h" />
     <ClInclude Include="Source\System\VFX\Instance\Emitter\Emitter.h" />
     <ClInclude Include="Source\System\VFX\Instance\Module\Module.h" />
     <ClInclude Include="Source\System\VFX\Instance\Module\TestModule.h" />

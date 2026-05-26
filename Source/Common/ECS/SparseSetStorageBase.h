@@ -14,20 +14,20 @@ public:
 	/// </summary>
 	/// <param name="entity">エンティティID</param>
 	/// <returns></returns>
-	T* Get(int entity) { return sparseSet.Get(entity); }
+	T* Get(int _entity) { return sparseSet.Get(_entity); }
 	/// <summary>
 	/// 追加
 	/// </summary>
 	/// <param name="entity">エンティティID</param>
 	/// <param name="component">追加コンポーネント</param>
-	void Add(int entity, const T& component) { sparseSet.Add(entity, component); }
+	void Add(int _entity, const T& _obj) { sparseSet.Add(_entity, _obj); }
 	/// <summary>
 	/// 除外
 	/// </summary>
 	/// <param name="entity">エンティティID</param>
-	void Remove(int entity) { sparseSet.Remove(entity); }
+	void Remove(int _entity) { sparseSet.Remove(_entity); }
 	// サイズ生成
-	void Reserve(size_t size) { sparseSet.Reserve(size); }
+	void Reserve(size_t _size) { sparseSet.Reserve(_size); }
 	// 全削除
 	void Clear() { sparseSet.Clear(); }
 	/// <summary>
@@ -35,13 +35,13 @@ public:
 	/// </summary>
 	/// <param name="output">取得したコンポーネント</param>
 	/// <returns>取得できたか</returns>
-	bool TryGet(int entity, T& output) { return sparseSet.TryGet(entity, output); }
+	bool TryGet(int _entity, T& _output) { return sparseSet.TryGet(_entity, _output); }
 	/// <summary>
 	/// 持っているか
 	/// </summary>
 	/// <param name="target">対象</param>
 	/// <returns>持っているか</returns>
-	bool Has(int entity) { return sparseSet.Has(entity); }
+	bool Has(int _entity) { return sparseSet.Has(_entity); }
 	// サイズ
 	size_t GetSize() { return sparseSet.GetSize(); }
 	// 実データコンテナ取得

@@ -380,5 +380,8 @@
     <ClInclude Include="Source\System\VFX\Instance\Module\TestModule.h">
       <Filter>ソース ファイル\System\VFX\Instance\Module</Filter>
     </ClInclude>
+    <ClInclude Include="Source\System\VFX\Asset\VFXAsset.h">
+      <Filter>ソース ファイル\System\VFX\Asset</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
