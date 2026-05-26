@@ -11,3 +11,9 @@ void SceneManager::Update()
 {
 	currentScene->Execute();
 }
+
+// 描画
+void SceneManager::Draw()
+{
+	currentScene->Draw();
+}
