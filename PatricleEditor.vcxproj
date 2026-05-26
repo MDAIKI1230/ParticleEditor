@@ -161,6 +161,7 @@
     <ClCompile Include="Source\System\Scenes\DebugScene.cpp" />
     <ClCompile Include="Source\System\TimeManager.cpp" />
     <ClCompile Include="Source\System\VFX\Storage\Allocator\LinearAllocator.cpp" />
+    <ClCompile Include="Source\System\VFX\System\BufferManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Common\BaseClass\ComponentBase.h" />
@@ -219,6 +220,8 @@
     <ClInclude Include="Source\System\VFX\Storage\Buffer\GPUBuffer.h" />
     <ClInclude Include="Source\System\VFX\Storage\Buffer\IAttributeBuffer.h" />
     <ClInclude Include="Source\System\VFX\Storage\VFXInstanceStorage.h" />
+    <ClInclude Include="Source\System\VFX\System\AttributeLayout.h" />
+    <ClInclude Include="Source\System\VFX\System\BufferManager.h" />
     <ClInclude Include="Source\System\VFX\System\SimulatePipeline.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

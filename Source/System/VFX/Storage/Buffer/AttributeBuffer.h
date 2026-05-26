@@ -23,6 +23,12 @@ public:
 		return &cpuData;
 	}
 
+	// メモリ確保
+	Allocation Allocate(size_t _count)
+	{
+		return allocator.Allocate(_count);
+	}
+
 	// GPUにデータを送る？
 	void Upload() override
 	{

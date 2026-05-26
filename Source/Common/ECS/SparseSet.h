@@ -14,33 +14,33 @@ public:
 	/// </summary>
 	/// <param name="entity">エンティティID</param>
 	/// <returns></returns>
-	T* Get(int entity)
+	T* Get(int _entity)
 	{
-		int id{ sparse[entity] };
+		int id{ sparse[_entity] };
 		return &dense[id];
 	}
 	/// <summary>
 	/// 追加
 	/// </summary>
 	/// <param name="entity">エンティティID</param>
-	/// <param name="component">追加コンポーネント</param>
-	void Add(int entity, const T& component)
+	/// <param name="component">追加オブジェクト</param>
+	void Add(int _entity, const T& _obj)
 	{
 		// コンポーネント追加
-		dense.push_back(component);
+		dense.push_back(_obj);
 		// エンティティ追加
-		entities.push_back(entity);
+		entities.push_back(_entity);
 		// 対応付け
-		sparse[entity] = dense.size() - 1;
+		sparse[_entity] = dense.size() - 1;
 	}
 	/// <summary>
 	/// 除外
 	/// </summary>
 	/// <param name="entity">エンティティID</param>
-	void Remove(int entity)
+	void Remove(int _entity)
 	{
 		// 除外コンポーネントインデックス
-		int denseIndex{ sparse[entity] };
+		int denseIndex{ sparse[_entity] };
 		// コンポーネントを除外
 		dense[denseIndex] = std::move(dense.back());
 		dense.pop_back();
@@ -48,14 +48,14 @@ public:
 		entities[denseIndex] = std::move(entities.back());
 		entities.pop_back();
 		// MAPから除外
-		sparse.erase(entity);
+		sparse.erase(_entity);
 	}
 	// サイズ生成
-	void Reserve(size_t size)
+	void Reserve(size_t _size)
 	{
 		// コンテナのreserve関数を呼ぶ
-		dense.reserve(size);
-		entities.reserve(size);
+		dense.reserve(_size);
+		entities.reserve(_size);
 	}
 	// 全削除
 	void Clear()
@@ -70,7 +70,7 @@ public:
 	/// </summary>
 	/// <param name="output">取得したコンポーネント</param>
 	/// <returns>取得できたか</returns>
-	bool TryGet(int entity, T& output)
+	bool TryGet(int _entity, T& _output)
 	{
 		// 空チェック
 		if (sparse.empty())
@@ -79,10 +79,10 @@ public:
 		}
 
 		// エンティティがあるかチェック
-		if (sparse.contains(entity))
+		if (sparse.contains(_entity))
 		{
 			// ある場合はアウトプットに入れてtrueを返す
-			output = dense[sparse[entity]];
+			_output = dense[sparse[_entity]];
 			return true;
 		}
 
@@ -94,7 +94,7 @@ public:
 	/// </summary>
 	/// <param name="target">対象</param>
 	/// <returns>持っているか</returns>
-	bool Has(int entity)
+	bool Has(int _entity)
 	{
 		// 空チェック
 		if (sparse.empty())
@@ -103,7 +103,7 @@ public:
 		}
 
 		// エンティティがあるかチェック
-		if (sparse.contains(entity))
+		if (sparse.contains(_entity))
 		{
 			// ある場合はtrueを返す
 			return true;

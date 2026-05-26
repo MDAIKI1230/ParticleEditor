@@ -180,6 +180,9 @@
     <ClCompile Include="Source\System\VFX\Storage\Allocator\LinearAllocator.cpp">
       <Filter>ソース ファイル\System\VFX\Storage\Allocator</Filter>
     </ClCompile>
+    <ClCompile Include="Source\System\VFX\System\BufferManager.cpp">
+      <Filter>ソース ファイル\System\VFX\System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\System\ApplicationManager.h">
@@ -352,6 +355,12 @@
     </ClInclude>
     <ClInclude Include="Source\System\VFX\Instance\Module\Module.h">
       <Filter>ソース ファイル\System\VFX\Instance\Module</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\VFX\System\BufferManager.h">
+      <Filter>ソース ファイル\System\VFX\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\VFX\System\AttributeLayout.h">
+      <Filter>ソース ファイル\System\VFX\System</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

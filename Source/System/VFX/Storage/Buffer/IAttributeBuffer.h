@@ -1,6 +1,7 @@
 #pragma once
 
 #include "VFXConstants.h"
+#include "Allocation.h"
 
 class IAttributeBuffer
 {
@@ -12,10 +13,10 @@ public:
 	}
 	// GPUにデータを送る？
 	virtual void Upload() = 0;
-	// サイズ分生成
-	virtual void Resize(size_t _size) = 0;
 	// GPUメモリからCPUメモリにキャッシュ
 	virtual void ReadBack() =0;
+	// メモリ確保
+	virtual Allocation Allocate(size_t _count) = 0;
 	// 仮想デストラクタ
 	virtual ~IAttributeBuffer() = default;
 
