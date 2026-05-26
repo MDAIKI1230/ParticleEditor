@@ -162,6 +162,7 @@
     <ClCompile Include="Source\System\TimeManager.cpp" />
     <ClCompile Include="Source\System\VFX\Storage\Allocator\LinearAllocator.cpp" />
     <ClCompile Include="Source\System\VFX\System\BufferManager.cpp" />
+    <ClCompile Include="Source\System\VFX\System\SimulatePipeline.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Common\BaseClass\ComponentBase.h" />

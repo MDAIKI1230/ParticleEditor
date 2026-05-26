@@ -183,6 +183,9 @@
     <ClCompile Include="Source\System\VFX\System\BufferManager.cpp">
       <Filter>ソース ファイル\System\VFX\System</Filter>
     </ClCompile>
+    <ClCompile Include="Source\System\VFX\System\SimulatePipeline.cpp">
+      <Filter>ソース ファイル\System\VFX\System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\System\ApplicationManager.h">

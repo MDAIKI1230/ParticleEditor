@@ -11,5 +11,5 @@ public:
 	/// </summary>
 	/// <param name="_bm">バッファマネージャー</param>
 	/// <param name="_allocation">アロケーション</param>
-	virtual void Update(BufferManager& _bm, Allocation _allocation) = 0;
+	virtual void Update(BufferManager& _bm, Allocation& _allocation) = 0;
 };

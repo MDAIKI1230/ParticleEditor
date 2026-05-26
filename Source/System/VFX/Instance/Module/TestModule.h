@@ -12,7 +12,7 @@ public:
 	/// </summary>
 	/// <param name="_bm">バッファマネージャー</param>
 	/// <param name="_allocation">アロケーション</param>
-	void Update(BufferManager& _bm, Allocation _allocation)
+	void Update(BufferManager& _bm, Allocation& _allocation) override
 	{
 		// バッファ取得
 		AttributeBuffer<Vector3> postionBuffer{ _bm.GetBuffer<Vector3>(AttributeType::POSITION) };

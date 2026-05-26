@@ -2,7 +2,7 @@
 
 #include "SparseSetStorageBase.h"
 
-#include "Instance\VFXInstance.h"
+#include "../Instance/VFXInstance.h"
 
 class VFXInstanceStorage :public SparseSetStorageBase<VFXInstance>
 {
