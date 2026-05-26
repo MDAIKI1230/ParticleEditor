@@ -154,7 +154,8 @@
     <ClCompile Include="Source\System\Adapter\Dxlib\DxlibInput.cpp" />
     <ClCompile Include="Source\System\Adapter\Dxlib\DxlibRenderer.cpp" />
     <ClCompile Include="Source\System\ApplicationManager.cpp" />
-    <ClCompile Include="Source\System\ComponentSystem\RenderringSystem.cpp" />
+    <ClCompile Include="Source\System\ComponentSystem\ModelRenderringSystem.cpp" />
+    <ClCompile Include="Source\System\ComponentSystem\VFXRenderingSystem.cpp" />
     <ClCompile Include="Source\System\ComponentSystem\VFXSimulateSystem.cpp" />
     <ClCompile Include="Source\System\ObjectManager.cpp" />
     <ClCompile Include="Source\System\ResourceManager.cpp" />
@@ -168,9 +169,11 @@
   <ItemGroup>
     <ClInclude Include="Source\Common\BaseClass\ComponentBase.h" />
     <ClInclude Include="Source\Common\BaseClass\ObjectBase.h" />
+    <ClInclude Include="Source\Common\BaseClass\RenderingSystem.h" />
     <ClInclude Include="Source\Common\BaseClass\SceneBase\SceneBase.h" />
     <ClInclude Include="Source\Common\BaseClass\StorageBase.h" />
     <ClInclude Include="Source\Common\BaseClass\SystemBase.h" />
+    <ClInclude Include="Source\Common\BaseClass\UpdateSystem.h" />
     <ClInclude Include="Source\Common\Constants\BaseConstants.h" />
     <ClInclude Include="Source\Common\Constants\KeyConstants.h" />
     <ClInclude Include="Source\Common\Constants\SceneConstants.h" />
@@ -203,7 +206,7 @@
     <ClInclude Include="Source\System\ComponentStorage\RendererComponentStorage.h" />
     <ClInclude Include="Source\System\ComponentStorage\TransformComponentStorage.h" />
     <ClInclude Include="Source\System\ComponentStorage\VFXComponentStorage.h" />
-    <ClInclude Include="Source\System\ComponentSystem\RenderingSystem.h" />
+    <ClInclude Include="Source\System\ComponentSystem\ModelRenderingSystem.h" />
     <ClInclude Include="Source\System\ComponentSystem\VFXRenderingSystem.h" />
     <ClInclude Include="Source\System\ComponentSystem\VFXSimulateSystem.h" />
     <ClInclude Include="Source\System\Components\RendererComponent.h" />
@@ -230,6 +233,7 @@
     <ClInclude Include="Source\System\VFX\System\AttributeLayout.h" />
     <ClInclude Include="Source\System\VFX\System\BufferManager.h" />
     <ClInclude Include="Source\System\VFX\System\SimulatePipeline.h" />
+    <ClInclude Include="Source\System\VFX\VFXWorld.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

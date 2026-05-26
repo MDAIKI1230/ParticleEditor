@@ -3,9 +3,9 @@
 #include "TransformComponent.h"
 #include "RendererComponentStorage.h"
 
-#include "RenderingSystem.h"
+#include "ModelRenderingSystem.h"
 
-void RenderingSystem::Update(IWorld* world)
+void ModelRenderingSystem::Draw(IWorld* world)
 {
 	// レンダラーコンポーネントストレージ
 	SparseSetStorageBase<RendererComponent>* rendererStorage{ world->GetStorage<RendererComponent>() };

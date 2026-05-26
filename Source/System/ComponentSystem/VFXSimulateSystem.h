@@ -1,12 +1,12 @@
 #pragma once
 
-#include "SystemBase.h"
+#include "UpdateSystem.h"
 
 #include "System/SimulatePipeline.h"
 #include "System/BufferManager.h"
 #include "Storage/VFXInstanceStorage.h"
 
-class VFXSimulateSystem :public SystemBase
+class VFXSimulateSystem :public UpdateSystem
 {
 public:
 	void Update(IWorld* world) override;

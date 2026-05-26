@@ -8,7 +8,8 @@
 
 #include "IWorld.h"
 
-#include "SystemBase.h"
+#include "UpdateSystem.h"
+#include "RenderingSystem.h"
 #include "SparseSetStorageBase.h"
 
 class SceneBase:public IWorld
@@ -26,7 +27,12 @@ protected:
 	/// システムの追加(moveされる)
 	/// </summary>
 	/// <param name="system">入れたいシステム</param>
-	void AddSystem(std::unique_ptr<SystemBase> _system);
+	void AddSystem(std::unique_ptr<UpdateSystem> _system);
+	/// <summary>
+	/// システムの追加(moveされる)
+	/// </summary>
+	/// <param name="system">入れたいシステム</param>
+	void AddSystem(std::unique_ptr<RenderingSystem> _system);
 	/// <summary>
 	/// ストレージの追加(moveされる)
 	/// </summary>
@@ -48,6 +54,8 @@ protected:
 protected:
 	// シーンの状態
 	SceneState state{ SceneState::INITIALIZE };
-	// システム
-	std::vector<std::unique_ptr<SystemBase>> systems;
+	// 更新系システム
+	std::vector<std::unique_ptr<UpdateSystem>> updateSystems;
+	// 描画系システム
+	std::vector<std::unique_ptr<RenderingSystem>> renderingSystems;
 };

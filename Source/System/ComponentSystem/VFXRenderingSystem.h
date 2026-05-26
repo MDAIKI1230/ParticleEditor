@@ -1,8 +1,8 @@
 #pragma once
 
-#include "SystemBase.h"
+#include "UpdateSystem.h"
 
-class VFXRenderingSystem :public SystemBase
+class VFXRenderingSystem :public UpdateSystem
 {
 	void Update(IWorld* world) override;
 };
