@@ -5,5 +5,5 @@ struct VFXComponent
 public:
 	VFXComponent() = default;
 private:
-
+	int vfxHandle;
 };

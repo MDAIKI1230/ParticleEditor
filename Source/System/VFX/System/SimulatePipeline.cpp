@@ -12,7 +12,9 @@ void SimulatePipeline::Execute(VFXInstanceStorage* _vfxIS, BufferManager& _bm)
 		for (auto module : vfx.GetModules())
 		{
 			for (auto& emitter : vfx.GetEmitters())
+			{
 				module->Update(_bm, emitter.GetAllocation());
+			}
 		}
 	}
 }

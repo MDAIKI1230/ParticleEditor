@@ -77,7 +77,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\DxLib_VC3_24f\DxLib_VC\プロジェクトに追加すべきファイル_VC用;$(ProjectDir)Source\Common\Constants;%(AdditionalIncludeDirectories);(&amp;ProjectDir)Common\BaseClass;(&amp;ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\Constants;$(ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\ECS;$(SourceDir)Source\Common\BaseClass\SceneBase;$(ProjectDir)Source\Common\Interface;$(ProjectDir)Source\Common\Math;$(ProjectDir)Source\System\Components;$(ProjectDir)Source\System\ComponentStorage;$(ProjectDir)Source\System\ComponentSystem;$(ProjectDir)Source\System\Adapter;$(ProjectDir)Source\System\Manager;$(ProjcetDir)Source\System;$(ProjectDir)Source\Objects;$(ProjectDir)Source\System\VFX\Storage\Allocator;$(ProjectDir)Source\System\VFX\Storage\Allocator</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DxLib_VC3_24f\DxLib_VC\プロジェクトに追加すべきファイル_VC用;$(ProjectDir)Source\Common\Constants;%(AdditionalIncludeDirectories);(&amp;ProjectDir)Common\BaseClass;(&amp;ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\Constants;$(ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\ECS;$(SourceDir)Source\Common\BaseClass\SceneBase;$(ProjectDir)Source\Common\Interface;$(ProjectDir)Source\Common\Math;$(ProjectDir)Source\System\Components;$(ProjectDir)Source\System\ComponentStorage;$(ProjectDir)Source\System\ComponentSystem;$(ProjectDir)Source\System\Adapter;$(ProjectDir)Source\System\Manager;$(ProjcetDir)Source\System;$(ProjectDir)Source\Objects;$(ProjectDir)Source\System\VFX\Storage\Allocator;$(ProjectDir)Source\System\VFX\Storage\Allocator;$(ProjectDir)Source\System\VFX</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -95,7 +95,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\DxLib_VC3_24f\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories);(&amp;ProjectDir)Common\BaseClass;(&amp;ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\Constants;$(ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\ECS;$(SourceDir)Source\Common\BaseClass\SceneBase;$(ProjectDir)Source\Common\Interface;$(ProjectDir)Source\Common\Math;$(ProjectDir)Source\System\Components;$(ProjectDir)Source\System\ComponentStorage;$(ProjectDir)Source\System\ComponentSystem;$(ProjectDir)Source\System\Adapter;$(ProjectDir)Source\System\Manager;$(ProjcetDir)Source\System;$(ProjectDir)Source\Objects;$(ProjectDir)Source\System\VFX\Storage\Allocator;$(ProjectDir)Source\System\VFX\Storage\Allocator</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DxLib_VC3_24f\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories);(&amp;ProjectDir)Common\BaseClass;(&amp;ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\Constants;$(ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\ECS;$(SourceDir)Source\Common\BaseClass\SceneBase;$(ProjectDir)Source\Common\Interface;$(ProjectDir)Source\Common\Math;$(ProjectDir)Source\System\Components;$(ProjectDir)Source\System\ComponentStorage;$(ProjectDir)Source\System\ComponentSystem;$(ProjectDir)Source\System\Adapter;$(ProjectDir)Source\System\Manager;$(ProjcetDir)Source\System;$(ProjectDir)Source\Objects;$(ProjectDir)Source\System\VFX\Storage\Allocator;$(ProjectDir)Source\System\VFX\Storage\Allocator;$(ProjectDir)Source\System\VFX</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -111,7 +111,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\DxLib_VC3_24f\DxLib_VC\プロジェクトに追加すべきファイル_VC用;$(ProjectDir)Source\Common\Constants;%(AdditionalIncludeDirectories);(&amp;ProjectDir)Common\BaseClass;(&amp;ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\Constants;$(ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\ECS;$(SourceDir)Source\Common\BaseClass\SceneBase;$(ProjectDir)Source\Common\Interface;$(ProjectDir)Source\Common\Math;$(ProjectDir)Source\System\Components;$(ProjectDir)Source\System\ComponentStorage;$(ProjectDir)Source\System\ComponentSystem;$(ProjectDir)Source\System\Adapter;$(ProjectDir)Source\System\Manager;$(ProjcetDir)Source\System;$(ProjectDir)Source\Objects;$(ProjectDir)Source\System\VFX\Storage\Allocator;$(ProjectDir)Source\System\VFX\Storage\Allocator</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DxLib_VC3_24f\DxLib_VC\プロジェクトに追加すべきファイル_VC用;$(ProjectDir)Source\Common\Constants;%(AdditionalIncludeDirectories);(&amp;ProjectDir)Common\BaseClass;(&amp;ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\Constants;$(ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\ECS;$(SourceDir)Source\Common\BaseClass\SceneBase;$(ProjectDir)Source\Common\Interface;$(ProjectDir)Source\Common\Math;$(ProjectDir)Source\System\Components;$(ProjectDir)Source\System\ComponentStorage;$(ProjectDir)Source\System\ComponentSystem;$(ProjectDir)Source\System\Adapter;$(ProjectDir)Source\System\Manager;$(ProjcetDir)Source\System;$(ProjectDir)Source\Objects;$(ProjectDir)Source\System\VFX\Storage\Allocator;$(ProjectDir)Source\System\VFX\Storage\Allocator;$(ProjectDir)Source\System\VFX</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -129,7 +129,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>C:\DxLib_VC3_24f\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories);(&amp;ProjectDir)Common\BaseClass;(&amp;ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\Constants;$(ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\ECS;$(SourceDir)Source\Common\BaseClass\SceneBase;$(ProjectDir)Source\Common\Interface;$(ProjectDir)Source\Common\Math;$(ProjectDir)Source\System\Components;$(ProjectDir)Source\System\ComponentStorage;$(ProjectDir)Source\System\ComponentSystem;$(ProjectDir)Source\System\Adapter;$(ProjectDir)Source\System\Manager;$(ProjcetDir)Source\System;$(ProjectDir)Source\Objects;$(ProjectDir)Source\System\VFX\Storage\Allocator;$(ProjectDir)Source\System\VFX\Storage\Allocator</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DxLib_VC3_24f\DxLib_VC\プロジェクトに追加すべきファイル_VC用;%(AdditionalIncludeDirectories);(&amp;ProjectDir)Common\BaseClass;(&amp;ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\Constants;$(ProjectDir)Source\Common\BaseClass;$(ProjectDir)Source\Common\ECS;$(SourceDir)Source\Common\BaseClass\SceneBase;$(ProjectDir)Source\Common\Interface;$(ProjectDir)Source\Common\Math;$(ProjectDir)Source\System\Components;$(ProjectDir)Source\System\ComponentStorage;$(ProjectDir)Source\System\ComponentSystem;$(ProjectDir)Source\System\Adapter;$(ProjectDir)Source\System\Manager;$(ProjcetDir)Source\System;$(ProjectDir)Source\Objects;$(ProjectDir)Source\System\VFX\Storage\Allocator;$(ProjectDir)Source\System\VFX\Storage\Allocator;$(ProjectDir)Source\System\VFX</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -155,6 +155,7 @@
     <ClCompile Include="Source\System\Adapter\Dxlib\DxlibRenderer.cpp" />
     <ClCompile Include="Source\System\ApplicationManager.cpp" />
     <ClCompile Include="Source\System\ComponentSystem\RenderringSystem.cpp" />
+    <ClCompile Include="Source\System\ComponentSystem\VFXSimulateSystem.cpp" />
     <ClCompile Include="Source\System\ObjectManager.cpp" />
     <ClCompile Include="Source\System\ResourceManager.cpp" />
     <ClCompile Include="Source\System\SceneManager.cpp" />
