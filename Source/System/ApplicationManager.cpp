@@ -39,10 +39,11 @@ int ApplicationManager::ApplicationMain()
 	{
 		input->Update();
 		timeManager->Update();
+		sceneManager->Update();
 
 		renderer->ClearDrawScreen();
 
-		sceneManager->Update();
+		sceneManager->Draw();
 
 		renderer->ScreenFlip();
 
