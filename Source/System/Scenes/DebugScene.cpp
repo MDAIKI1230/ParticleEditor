@@ -8,6 +8,7 @@
 #include "VFXComponent.h"
 #include "VFXComponentStorage.h"
 #include "VFXSimulateSystem.h"
+#include "VFXRenderingSystem.h"
 
 #include "DebugScene.h"
 
@@ -34,6 +35,8 @@ void DebugScene::Initialize()
 
 	// VFXシミュレートシステム追加
 	AddSystem(std::make_unique<VFXSimulateSystem>());
+	// VFXレンダリングシステム追加
+	AddSystem(std::make_unique<VFXRenderingSystem>());
 	// レンダラーストレージ追加
 	AddStorage<VFXComponent>(std::make_unique<VFXComponentStorage>());
 
