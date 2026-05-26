@@ -200,7 +200,10 @@
     <ClInclude Include="Source\System\ApplicationManager.h" />
     <ClInclude Include="Source\System\ComponentStorage\RendererComponentStorage.h" />
     <ClInclude Include="Source\System\ComponentStorage\TransformComponentStorage.h" />
+    <ClInclude Include="Source\System\ComponentStorage\VFXComponentStorage.h" />
     <ClInclude Include="Source\System\ComponentSystem\RenderingSystem.h" />
+    <ClInclude Include="Source\System\ComponentSystem\VFXRenderingSystem.h" />
+    <ClInclude Include="Source\System\ComponentSystem\VFXSimulateSystem.h" />
     <ClInclude Include="Source\System\Components\RendererComponent.h" />
     <ClInclude Include="Source\System\Components\TransformComponent.h" />
     <ClInclude Include="Source\System\Components\VFXComponent.h" />
@@ -212,6 +215,7 @@
     <ClInclude Include="Source\System\TimeManager.h" />
     <ClInclude Include="Source\System\VFX\Instance\Emitter\Emitter.h" />
     <ClInclude Include="Source\System\VFX\Instance\Module\Module.h" />
+    <ClInclude Include="Source\System\VFX\Instance\Module\TestModule.h" />
     <ClInclude Include="Source\System\VFX\Instance\VFXInstance.h" />
     <ClInclude Include="Source\System\VFX\Storage\Allocator\Allocation.h" />
     <ClInclude Include="Source\System\VFX\Storage\Allocator\Allocator.h" />

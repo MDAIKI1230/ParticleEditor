@@ -362,5 +362,17 @@
     <ClInclude Include="Source\System\VFX\System\AttributeLayout.h">
       <Filter>ソース ファイル\System\VFX\System</Filter>
     </ClInclude>
+    <ClInclude Include="Source\System\ComponentStorage\VFXComponentStorage.h">
+      <Filter>ソース ファイル\System\ComponentStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\ComponentSystem\VFXSimulateSystem.h">
+      <Filter>ソース ファイル\System\ComponentSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\ComponentSystem\VFXRenderingSystem.h">
+      <Filter>ソース ファイル\System\ComponentSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\VFX\Instance\Module\TestModule.h">
+      <Filter>ソース ファイル\System\VFX\Instance\Module</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
