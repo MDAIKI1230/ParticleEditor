@@ -15,7 +15,10 @@ class SceneBase:public IWorld
 {
 public:
 	SceneBase();
+	// 更新
 	void Execute();
+	// 描画
+	void Draw();
 	// 仮想デストラクタ
 	virtual ~SceneBase() = default;
 protected:
