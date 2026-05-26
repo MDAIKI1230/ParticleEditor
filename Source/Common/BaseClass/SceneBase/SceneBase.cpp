@@ -69,19 +69,6 @@ void SceneBase::AddSystem(std::unique_ptr<SystemBase> _system)
 	systems.insert(it, std::move(_system));
 }
 
-/// <summary>
-/// ストレージの追加(moveされる)
-// </summary>
-/// <param name="storage">入れたいストレージ</param>
-template<typename T>
-void SceneBase::AddStorage(std::unique_ptr<SparseSetStorageBase<T>> _storage)
-{
-	// コンテナに追加
-	storages.push_back(std::move(_storage));
-	// 対応付け
-	storageMap[typeid(T)] = storages.size() - 1;
-}
-
 void SceneBase::FadeIn()
 {
 	

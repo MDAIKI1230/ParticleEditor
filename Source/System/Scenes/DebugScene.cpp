@@ -5,6 +5,10 @@
 
 #include "TransformComponent.h"
 
+#include "VFXComponent.h"
+#include "VFXComponentStorage.h"
+#include "VFXSimulateSystem.h"
+
 #include "DebugScene.h"
 
 // コンストラクタ
@@ -28,7 +32,13 @@ void DebugScene::Initialize()
 
 	state = SceneState::UPDATE;
 
-	
+	// VFXシミュレートシステム追加
+	AddSystem(std::make_unique<VFXSimulateSystem>());
+	// レンダラーストレージ追加
+	AddStorage<VFXComponent>(std::make_unique<VFXComponentStorage>());
+
+	VFXComponent vfx{ VFXAsset{} };
+	GetStorage<VFXComponent>()->Add(0, vfx);
 }
 // 終了
 void DebugScene::Terminate()

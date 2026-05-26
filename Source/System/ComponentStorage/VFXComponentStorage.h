@@ -4,7 +4,7 @@
 
 #include "VFXComponent.h"
 
-class VFXCOmponentStorage :public SparseSetStorageBase<VFXComponent>
+class VFXComponentStorage :public SparseSetStorageBase<VFXComponent>
 {
 
 };
