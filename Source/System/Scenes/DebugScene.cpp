@@ -1,12 +1,12 @@
 #include "ServiceLocator.h"
 
 #include "RendererComponent.h"
-#include "RendererComponentStorage.h"
 
 #include "TransformComponent.h"
 
 #include "VFXComponent.h"
 #include "VFXComponentStorage.h"
+#include "VFXPlaySystem.h"
 
 #include "DebugScene.h"
 
@@ -33,7 +33,10 @@ void DebugScene::Initialize()
 	AddStorage<VFXComponent>(std::make_unique<VFXComponentStorage>());
 
 	VFXComponent vfx{ VFXAsset{} };
+	vfx.Play();
 	GetStorage<VFXComponent>()->Add(0, vfx);
+
+	AddSystem(std::make_unique< VFXPlaySystem>());
 
 	state = SceneState::UPDATE;
 }
