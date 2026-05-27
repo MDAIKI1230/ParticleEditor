@@ -2,6 +2,7 @@
 
 #include "Emitter/Emitter.h"
 #include "Module/Module.h"
+#include "TransformComponent.h"
 
 #include "../Asset/VFXAsset.h"
 
@@ -9,8 +10,9 @@ class VFXInstance
 {
 public:
 	// コンストラクタ
-	VFXInstance(VFXAsset _asset) :
-		asset{ _asset }
+	VFXInstance(const VFXAsset& _asset, TransformComponent* _transformComponent) :
+		asset{ _asset },
+		transform{ _transformComponent }
 	{
 	}
 
@@ -19,15 +21,15 @@ public:
 	// モジュール取得
 	std::vector<Module*>& GetModules() { return modules; }
 	// Transform参照取得
-	const Transform* GetTransform() { return transform; }
+	const TransformComponent* GetTransform() { return transform; }
 private:
 	// エミッタ―リスト
 	std::vector<Emitter> emitters;
 	// 使うモジュール群
 	std::vector<Module*> modules;
 	// アセット
-	VFXAsset asset;
+	const VFXAsset& asset;
 
 	// Transofrm参照
-	Transform* transform;
+	TransformComponent* transform;
 };

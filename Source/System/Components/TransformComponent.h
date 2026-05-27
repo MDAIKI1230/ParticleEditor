@@ -62,17 +62,17 @@ public:
 
     // 取得系
     // 位置
-    Vector3& GetPosition() { return trans.GetPosition(); }
+    const Vector3& GetPosition()const { return trans.GetPosition(); }
     // 回転
-    Quaternion& GetRotate() { return trans.GetRotate(); }
+    const Quaternion& GetRotate()const { return trans.GetRotate(); }
     // 大きさ
-    Vector3& GetScale() { return trans.GetScale(); }
+    const Vector3& GetScale()const { return trans.GetScale(); }
     // ローカル行列
-    Matrix4x4& GetLocalMatrix() { return trans.GetLocalMatrix(); }
+    const Matrix4x4& GetLocalMatrix()const { return trans.GetLocalMatrix(); }
     // ワールド行列
-    Matrix4x4& GetWorldMatrix() { return trans.GetWorldMatrix(); }
+    const Matrix4x4& GetWorldMatrix()const { return trans.GetWorldMatrix(); }
     // 親
-    Transform* GetParent() { return trans.GetParent(); };
+    const Transform* GetParent()const { return trans.GetParent(); }
 private:
 	// トランスフォーム
 	Transform trans{};

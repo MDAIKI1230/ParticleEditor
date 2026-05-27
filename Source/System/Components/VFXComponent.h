@@ -5,7 +5,10 @@
 struct VFXComponent
 {
 public:
-	VFXComponent(VFXAsset _vfxAsset);
+	VFXComponent(VFXAsset _vfxAsset) :
+		vfxAsset{ _vfxAsset }
+	{
+	}
 
 	// VFXPlay関数
 	void Play() { isPlay = true; }
@@ -15,9 +18,11 @@ public:
 	bool GetIsPlay() { return isPlay; }
 	// アセット取得
 	VFXAsset& GetAsset() { return vfxAsset; }
+	// ハンドル取得
+	int GetHandle() { return vfxHandle; }
 private:
 	// インスタンスハンドル
-	int vfxHandle;
+	int vfxHandle{ -1 };
 	// アセット
 	VFXAsset vfxAsset;
 	// 初期化フラグ

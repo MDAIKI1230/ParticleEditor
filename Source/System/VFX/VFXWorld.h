@@ -2,6 +2,8 @@
 
 #include "IWorld.h"
 
+#include "TransformComponent.h"
+
 #include "System/BufferManager.h"
 #include "System/SimulatePipeline.h"
 #include "System/RenderingPipeline.h"
@@ -20,7 +22,7 @@ public:
 	/// </summary>
 	/// <param name="asset">アセット</param>
 	/// <returns>ハンドル</returns>
-	int CreateInstance(const VFXAsset& _asset);
+	int CreateInstance(const VFXAsset& _asset, TransformComponent* _transformComponent);
 private:
 	BufferManager bufferManager;
 	SimulatePipeline simulatePipeline;
