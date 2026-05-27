@@ -7,12 +7,12 @@ struct VFXComponent
 public:
 	VFXComponent(VFXAsset _vfxAsset);
 
-	// 初期化完了
-	void CompleteInit() { isInit = true; }
+	// VFXPlay関数
+	void Play() { isPlay = true; }
 	// ハンドルセット
 	void SetHandle(int _handle) { vfxHandle = _handle; }
 	// 初期化フラグ取得
-	bool GetIsInit() { return isInit; }
+	bool GetIsPlay() { return isPlay; }
 	// アセット取得
 	VFXAsset& GetAsset() { return vfxAsset; }
 private:
@@ -21,5 +21,5 @@ private:
 	// アセット
 	VFXAsset vfxAsset;
 	// 初期化フラグ
-	bool isInit{ false };
+	bool isPlay{ false };
 };
