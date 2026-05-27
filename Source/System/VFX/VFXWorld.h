@@ -15,6 +15,12 @@ public:
 	void Update();
 	// 描画
 	void Draw();
+	/// <summary>
+	/// VFXインスタンス作成
+	/// </summary>
+	/// <param name="asset">アセット</param>
+	/// <returns>ハンドル</returns>
+	int CreateInstance(const VFXAsset& asset);
 private:
 	BufferManager bufferManager;
 	SimulatePipeline simulatePipeline;

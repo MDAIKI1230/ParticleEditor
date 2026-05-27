@@ -5,10 +5,7 @@
 struct VFXComponent
 {
 public:
-	VFXComponent(VFXAsset _vfxAsset) :
-		vfxAsset{ _vfxAsset }
-	{
-	}
+	VFXComponent(VFXAsset _vfxAsset);
 
 	// 初期化完了
 	void CompleteInit() { isInit = true; }
