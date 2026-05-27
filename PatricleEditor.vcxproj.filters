@@ -192,6 +192,9 @@
     <ClCompile Include="Source\System\VFX\VFXWorld.cpp">
       <Filter>ソース ファイル\System\VFX</Filter>
     </ClCompile>
+    <ClCompile Include="Source\System\Components\VFXComponent.cpp">
+      <Filter>ソース ファイル\System\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\System\ApplicationManager.h">

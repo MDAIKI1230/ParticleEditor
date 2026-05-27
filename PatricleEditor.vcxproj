@@ -155,6 +155,7 @@
     <ClCompile Include="Source\System\Adapter\Dxlib\DxlibRenderer.cpp" />
     <ClCompile Include="Source\System\ApplicationManager.cpp" />
     <ClCompile Include="Source\System\ComponentSystem\ModelRenderringSystem.cpp" />
+    <ClCompile Include="Source\System\Components\VFXComponent.cpp" />
     <ClCompile Include="Source\System\ObjectManager.cpp" />
     <ClCompile Include="Source\System\ResourceManager.cpp" />
     <ClCompile Include="Source\System\SceneManager.cpp" />

@@ -22,3 +22,13 @@ void VFXWorld::Draw()
 {
 	renderingPipeline.Draw(*static_cast<VFXInstanceStorage*>(GetStorage<VFXInstance>()), bufferManager);
 }
+
+/// <summary>
+/// VFXインスタンス作成
+/// </summary>
+/// <param name="asset">アセット</param>
+/// <returns>ハンドル</returns>
+int VFXWorld::CreateInstance(const VFXAsset& asset)
+{
+	
+}
