@@ -49,7 +49,7 @@ void DxlibRenderer::LoadDivGraph(const std::string& _fileName, int _allNum, int 
 
 // モデル情報セット系
 // 行列セット
-void DxlibRenderer::ModelSetMatrix(int _handle, Matrix4x4 _mat)
+void DxlibRenderer::ModelSetMatrix(int _handle, const Matrix4x4& _mat)
 {
 	DxLib::MV1SetMatrix(_handle, ToDxlib(_mat));
 }
@@ -62,9 +62,18 @@ void DxlibRenderer::DrawModel(int _handle)
 }
 
 // 画像描画
-void DxlibRenderer::DrawGraph(Vector2* vec, int _handle, bool _transFlag)
+void DxlibRenderer::DrawGraph(const Vector2& _pos, int _handle, bool _transFlag)
 {
-	DxLib::DrawGraph(vec->x, vec->y, _handle, _transFlag);
+	DxLib::DrawGraph(_pos.x, _pos.y, _handle, _transFlag);
+}
+
+// 球描画
+void DxlibRenderer::DrawSphere(const Vector3& _pos, float _radius)
+{
+	DxLib::DrawSphere3D(
+		ToDxlib(_pos), _radius, 32,
+		GetColor(255, 255, 255), GetColor(255, 255, 255),
+		true);
 }
 
 // ---リソース削除関数---
