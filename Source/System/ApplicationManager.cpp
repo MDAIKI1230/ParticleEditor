@@ -21,6 +21,7 @@ ApplicationManager::ApplicationManager()
 	input = std::make_unique<DxlibInput>();
 	sceneManager = std::make_unique<SceneManager>();
 	timeManager = std::make_unique<TimeManager>();
+	vfxWorld = std::make_unique<VFXWorld>();
 
 	// サービスロケータに登録
 	ServiceLocator::SetRenderer(renderer.get());
@@ -40,10 +41,12 @@ int ApplicationManager::ApplicationMain()
 		input->Update();
 		timeManager->Update();
 		sceneManager->Update();
+		vfxWorld->Update();
 
 		renderer->ClearDrawScreen();
 
 		sceneManager->Draw();
+		vfxWorld->Draw();
 
 		renderer->ScreenFlip();
 

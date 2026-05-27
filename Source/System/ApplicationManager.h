@@ -5,6 +5,7 @@
 #include "ISystem.h"
 #include "SceneManager.h"
 #include "TimeManager.h"
+#include "VFXWorld.h"
 
 class ApplicationManager
 {
@@ -17,4 +18,5 @@ private:
 	std::unique_ptr<ISystem> system;
 	std::unique_ptr<SceneManager> sceneManager;
 	std::unique_ptr<TimeManager> timeManager;
+	std::unique_ptr<VFXWorld> vfxWorld;
 };
