@@ -15,12 +15,12 @@ public:
 	void Update(BufferManager& _bm, Allocation& _allocation) override
 	{
 		// バッファ取得
-		AttributeBuffer<Vector3> postionBuffer{ _bm.GetBuffer<Vector3>(AttributeType::POSITION) };
-		AttributeBuffer<Vector3> velocityBuffer{ _bm.GetBuffer<Vector3>(AttributeType::VELOCITY) };
+		AttributeBuffer<Vector3>* postionBuffer{ _bm.GetBuffer<Vector3>(AttributeType::POSITION) };
+		AttributeBuffer<Vector3>* velocityBuffer{ _bm.GetBuffer<Vector3>(AttributeType::VELOCITY) };
 
 		// CPUデータ取得
-		auto* positions{ postionBuffer.GetCPUData() };
-		auto* velocities{ velocityBuffer.GetCPUData() };
+		auto* positions{ postionBuffer->GetCPUData() };
+		auto* velocities{ velocityBuffer->GetCPUData() };
 
 		// 終了地点
 		size_t end{ _allocation.start + _allocation.count };

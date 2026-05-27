@@ -34,7 +34,7 @@ int VFXWorld::CreateInstance(const VFXAsset& _asset, TransformComponent* _transf
 	VFXInstanceStorage* vfxIS{ static_cast<VFXInstanceStorage*>(GetStorage<VFXInstance>()) };
 	// ハンドル
 	int handle{ static_cast<int>(vfxIS->GetSize()) };
-	vfxIS->Add(handle, VFXInstance{ _asset ,_transformComponent });
+	vfxIS->Add(handle, VFXInstance{ _asset ,_transformComponent,simulatePipeline,bufferManager });
 
 	return handle;
 }
