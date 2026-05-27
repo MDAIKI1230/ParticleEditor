@@ -27,6 +27,7 @@ ApplicationManager::ApplicationManager()
 	ServiceLocator::SetRenderer(renderer.get());
 	ServiceLocator::SetInput(input.get());
 	ServiceLocator::SetTimeManager(timeManager.get());
+	ServiceLocator::SetVFXWorld(vfxWorld.get());
 }
 
 int ApplicationManager::ApplicationMain()
