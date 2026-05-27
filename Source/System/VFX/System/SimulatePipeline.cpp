@@ -4,9 +4,9 @@
 /// モジュール更新
 /// </summary>
 /// <param name="_vfxIS">VFXInstanceStorage</param>
-void SimulatePipeline::Execute(VFXInstanceStorage* _vfxIS, BufferManager& _bm)
+void SimulatePipeline::Execute(VFXInstanceStorage& _vfxIS, BufferManager& _bm)
 {
-	std::vector<VFXInstance>* dense{ _vfxIS->GetDense() };
+	std::vector<VFXInstance>* dense{ _vfxIS.GetDense() };
 	for (auto& vfx : *dense)
 	{
 		for (auto module : vfx.GetModules())

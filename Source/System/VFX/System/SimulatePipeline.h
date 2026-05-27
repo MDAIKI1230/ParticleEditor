@@ -11,6 +11,6 @@ public:
 	/// </summary>
 	/// <param name="_vfxIS">VFXInstanceStorage</param>
 	/// <param name="_bm">BufferManager</param>
-	void Execute(VFXInstanceStorage* _vfxIS, BufferManager& _bm);
+	void Execute(VFXInstanceStorage& _vfxIS, BufferManager& _bm);
 	
 };

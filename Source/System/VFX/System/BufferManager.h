@@ -10,10 +10,18 @@ class BufferManager
 public:
 	// バッファ取得関数
 	template<typename T>
-	AttributeBuffer<T>& GetBuffer(AttributeType _type);
+	AttributeBuffer<T>* GetBuffer(AttributeType _type)
+	{
+		return static_cast<AttributeBuffer<T>*>(buffers[_type].get());
+	}
+
 	// バッファ作成
 	template<typename T>
-	void CreateBuffer(AttributeType _type, size_t _size);
+	void CreateBuffer(AttributeType _type, size_t _size)
+	{
+		buffers[_type] = std::make_unique<AttributeBuffer<T>>(_size);
+	}
+
 	// メモリ確保
 	void Allocate(size_t _count);
 

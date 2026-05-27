@@ -2,14 +2,14 @@
 
 #include "IWorld.h"
 
-#include "Storage/VFXInstanceStorage.h"
 #include "System/BufferManager.h"
 #include "System/SimulatePipeline.h"
+#include "System/RenderingPipeline.h"
 
 class VFXWorld:public IWorld
 {
 public:
-	// コンストラクタ。
+	// コンストラクタ
 	VFXWorld();
 	// 更新
 	void Update();
@@ -18,4 +18,5 @@ public:
 private:
 	BufferManager bufferManager;
 	SimulatePipeline simulatePipeline;
+	RenderingPipeline renderingPipeline;
 };

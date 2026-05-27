@@ -6,5 +6,5 @@
 class RenderingPipeline
 {
 public:
-	void Draw(VFXInstanceStorage* _vfxIS, BufferManager& _bm);
+	void Draw(VFXInstanceStorage& _vfxIS, BufferManager& _bm);
 };
