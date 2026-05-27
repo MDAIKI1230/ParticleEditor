@@ -162,9 +162,6 @@
     <ClCompile Include="Source\Common\Math\Transform\Transform.cpp">
       <Filter>ソース ファイル\Common\Math\Transform</Filter>
     </ClCompile>
-    <ClCompile Include="Source\System\ComponentSystem\RenderringSystem.cpp">
-      <Filter>ソース ファイル\System\ComponentSystem</Filter>
-    </ClCompile>
     <ClCompile Include="Source\System\Scenes\DebugScene.cpp">
       <Filter>ソース ファイル\System\Manager\Scenes</Filter>
     </ClCompile>
@@ -186,8 +183,14 @@
     <ClCompile Include="Source\System\VFX\System\SimulatePipeline.cpp">
       <Filter>ソース ファイル\System\VFX\System</Filter>
     </ClCompile>
-    <ClCompile Include="Source\System\ComponentSystem\VFXSimulateSystem.cpp">
+    <ClCompile Include="Source\System\ComponentSystem\ModelRenderringSystem.cpp">
       <Filter>ソース ファイル\System\ComponentSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\VFX\System\RenderingPipeline.cpp">
+      <Filter>ソース ファイル\System\VFX\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\System\VFX\VFXWorld.cpp">
+      <Filter>ソース ファイル\System\VFX</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -269,9 +272,6 @@
     <ClInclude Include="Source\Common\Math\Transform\Transform.h">
       <Filter>ソース ファイル\Common\Math\Transform</Filter>
     </ClInclude>
-    <ClInclude Include="Source\System\ComponentSystem\RenderingSystem.h">
-      <Filter>ソース ファイル\System\ComponentSystem</Filter>
-    </ClInclude>
     <ClInclude Include="Source\System\ComponentStorage\RendererComponentStorage.h">
       <Filter>ソース ファイル\System\ComponentStorage</Filter>
     </ClInclude>
@@ -283,9 +283,6 @@
     </ClInclude>
     <ClInclude Include="Source\System\ComponentStorage\TransformComponentStorage.h">
       <Filter>ソース ファイル\System\ComponentStorage</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\System\Scenes\DebugScene.h">
-      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\Common\Interface\IRenderer.h">
       <Filter>ソース ファイル\Common\Interface</Filter>
@@ -316,9 +313,6 @@
     </ClInclude>
     <ClInclude Include="Source\Objects\Camera.h">
       <Filter>ソース ファイル\Objects</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Common\ECS\ComponentStorageBase.h">
-      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Source\System\VFX\System\SimulatePipeline.h">
       <Filter>ソース ファイル\System\VFX\System</Filter>
@@ -371,17 +365,32 @@
     <ClInclude Include="Source\System\ComponentStorage\VFXComponentStorage.h">
       <Filter>ソース ファイル\System\ComponentStorage</Filter>
     </ClInclude>
-    <ClInclude Include="Source\System\ComponentSystem\VFXSimulateSystem.h">
-      <Filter>ソース ファイル\System\ComponentSystem</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\System\ComponentSystem\VFXRenderingSystem.h">
-      <Filter>ソース ファイル\System\ComponentSystem</Filter>
-    </ClInclude>
     <ClInclude Include="Source\System\VFX\Instance\Module\TestModule.h">
       <Filter>ソース ファイル\System\VFX\Instance\Module</Filter>
     </ClInclude>
     <ClInclude Include="Source\System\VFX\Asset\VFXAsset.h">
       <Filter>ソース ファイル\System\VFX\Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\VFX\VFXWorld.h">
+      <Filter>ソース ファイル\System\VFX</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\BaseClass\RenderingSystem.h">
+      <Filter>ソース ファイル\Common\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\BaseClass\UpdateSystem.h">
+      <Filter>ソース ファイル\Common\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Common\ECS\ComponentStorageBase.h">
+      <Filter>ソース ファイル\Common\BaseClass</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\ComponentSystem\ModelRenderingSystem.h">
+      <Filter>ソース ファイル\System\ComponentSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\Scenes\DebugScene.h">
+      <Filter>ソース ファイル\System\Manager\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\System\VFX\System\RenderingPipeline.h">
+      <Filter>ソース ファイル\System\VFX\System</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

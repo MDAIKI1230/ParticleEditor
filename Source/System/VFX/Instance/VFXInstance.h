@@ -25,4 +25,7 @@ private:
 	std::vector<Module*> modules;
 	// アセット
 	VFXAsset asset;
+
+	// Transofrm参照
+	Transform* transform;
 };
