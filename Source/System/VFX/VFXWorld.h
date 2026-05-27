@@ -20,7 +20,7 @@ public:
 	/// </summary>
 	/// <param name="asset">アセット</param>
 	/// <returns>ハンドル</returns>
-	int CreateInstance(const VFXAsset& asset);
+	int CreateInstance(const VFXAsset& _asset);
 private:
 	BufferManager bufferManager;
 	SimulatePipeline simulatePipeline;

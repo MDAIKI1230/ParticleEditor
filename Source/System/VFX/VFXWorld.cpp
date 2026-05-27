@@ -28,7 +28,13 @@ void VFXWorld::Draw()
 /// </summary>
 /// <param name="asset">アセット</param>
 /// <returns>ハンドル</returns>
-int VFXWorld::CreateInstance(const VFXAsset& asset)
+int VFXWorld::CreateInstance(const VFXAsset& _asset)
 {
-	
+	// ストレージ取得
+	VFXInstanceStorage* vfxIS{ static_cast<VFXInstanceStorage*>(GetStorage<VFXInstance>()) };
+	// ハンドル
+	int handle{ vfxIS->GetSize() };
+	vfxIS->Add(handle, VFXInstance{ _asset });
+
+	return handle;
 }
