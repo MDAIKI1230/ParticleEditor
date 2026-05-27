@@ -7,8 +7,11 @@
 void RenderingPipeline::Draw(VFXInstanceStorage& _vfxIS, BufferManager& _bm)
 {
 	std::vector<VFXInstance>* dense{ _vfxIS.GetDense() };
+
 	for (auto& vfx : *dense)
 	{
+		// Transform行列取得
+		const Vector3& transPos{ vfx.GetTransform()->GetPosition() };
 		for (auto& emitter : vfx.GetEmitters())
 		{
 			// アロケーション取得
@@ -22,6 +25,8 @@ void RenderingPipeline::Draw(VFXInstanceStorage& _vfxIS, BufferManager& _bm)
 			// 描画
 			for (Vector3 pos : *dense)
 			{
+				// Transform分加算
+				pos += transPos;
 				ServiceLocator::GetRenderer()->DrawSphere(pos, 10.0f);
 			}
 		}

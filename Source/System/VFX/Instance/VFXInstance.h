@@ -18,6 +18,8 @@ public:
 	std::vector<Emitter>& GetEmitters() { return emitters; }
 	// モジュール取得
 	std::vector<Module*>& GetModules() { return modules; }
+	// Transform参照取得
+	const Transform* GetTransform() { return transform; }
 private:
 	// エミッタ―リスト
 	std::vector<Emitter> emitters;

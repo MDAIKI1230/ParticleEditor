@@ -66,17 +66,17 @@ public:
 
     // 取得系
     // 位置
-    Vector3& GetPosition() { return position; }
+    const Vector3& GetPosition() const { return position; }
     // 回転
-    Quaternion& GetRotate() { return rotation; }
+    const Quaternion& GetRotate() const { return rotation; }
     // 大きさ
-    Vector3& GetScale() { return scale; }
+    const Vector3& GetScale() const { return scale; }
     // ローカル行列
-    Matrix4x4& GetLocalMatrix() { return localMatrix; }
+    const Matrix4x4& GetLocalMatrix() const { return localMatrix; }
     // ワールド行列
-    Matrix4x4& GetWorldMatrix() { return worldMatrix; }
+    const Matrix4x4& GetWorldMatrix() const { return worldMatrix; }
     // 親
-    Transform* GetParent() { return parent; };
+    const Transform* GetParent() const { return parent; };
 
     /// <summary>
     /// TRSに分解する関数
